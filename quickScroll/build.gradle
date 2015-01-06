@@ -1,0 +1,25 @@
+apply plugin: 'android-library'
+android {
+    compileSdkVersion 20
+    buildToolsVersion '20.0.0'
+
+    defaultConfig {
+        applicationId "com.andraskindler.quickscroll"
+        minSdkVersion 14
+        targetSdkVersion 19
+    }
+    lintOptions {
+        abortOnError false
+    }
+
+    buildTypes {
+        release {
+
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile project(':picasso')
+}

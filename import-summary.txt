@@ -1,0 +1,165 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Risky Project Location:
+-----------------------
+The tools *should* handle project locations in any directory. However,
+due to bugs, placing projects in directories containing spaces in the
+path, or characters like ", ' and &, have had issues. We're working to
+eliminate these bugs, but to save yourself headaches you may want to
+move your project to a location where this is not a problem.
+C:\Users\Saravan\Android Workspace\Jams Music Player
+                        -              -     -      
+
+Manifest Merging:
+-----------------
+Your project uses libraries that provide manifests, and your Eclipse
+project did not explicitly turn on manifest merging. In Android Gradle
+projects, manifests are always merged (meaning that contents from your
+libraries' manifests will be merged into the app manifest. If you had
+manually copied contents from library manifests into your app manifest
+you may need to remove these for the app to build correctly.
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+From CircularImageView:
+* proguard-project.txt
+From Jams Music Player:
+* changelog.txt
+From QuickScroll:
+* pom.xml
+From drag-sort-listview-library:
+* .gitignore
+* CVS\
+* CVS\Entries
+* CVS\Repository
+* CVS\Root
+* ant.properties
+* build.xml
+* pom.xml
+* proguard-project.txt
+From licenses-dialog-library:
+* pom.xml
+From picasso-library:
+* proguard-project.txt
+From velocity-view-pager-library:
+* proguard-project.txt
+From view-pager-indicator-library:
+* CVS\
+* CVS\Entries
+* CVS\Repository
+* CVS\Root
+* pom.xml
+
+Replaced Jars with Dependencies:
+--------------------------------
+The importer recognized the following .jar files as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the .jar file in your project was of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the jar replacement in the import wizard and try again:
+
+android-support-v4.jar => com.android.support:support-v4:+
+
+Replaced Libraries with Dependencies:
+-------------------------------------
+The importer recognized the following library projects as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the source files in your project were of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the library replacement in the import wizard and try
+again:
+
+google-play-services_lib => [com.google.android.gms:play-services:+]
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+In CircularImageView:
+* AndroidManifest.xml => circularImageView\src\main\AndroidManifest.xml
+* assets\ => circularImageView\src\main\assets\
+* lint.xml => circularImageView\lint.xml
+* res\ => circularImageView\src\main\res\
+* src\ => circularImageView\src\main\java\
+In QuickScroll:
+* AndroidManifest.xml => quickScroll\src\main\AndroidManifest.xml
+* assets\ => quickScroll\src\main\assets\
+* lint.xml => quickScroll\lint.xml
+* res\ => quickScroll\src\main\res\
+* src\ => quickScroll\src\main\java\
+In drag-sort-listview-library:
+* AndroidManifest.xml => dragsortlistviewlibrary\src\main\AndroidManifest.xml
+* assets\ => dragsortlistviewlibrary\src\main\assets\
+* lint.xml => dragsortlistviewlibrary\lint.xml
+* res\ => dragsortlistviewlibrary\src\main\res\
+* src\ => dragsortlistviewlibrary\src\main\java\
+In licenses-dialog-library:
+* AndroidManifest.xml => licensesdialoglibrary\src\main\AndroidManifest.xml
+* assets\ => licensesdialoglibrary\src\main\assets\
+* lint.xml => licensesdialoglibrary\lint.xml
+* res\ => licensesdialoglibrary\src\main\res\
+* src\ => licensesdialoglibrary\src\main\java\
+In picasso-library:
+* AndroidManifest.xml => picassolibrary\src\main\AndroidManifest.xml
+* assets\ => picassolibrary\src\main\assets\
+* libs\annotations-12.0.jar => picassolibrary\libs\annotations-12.0.jar
+* res\ => picassolibrary\src\main\res\
+* src\ => picassolibrary\src\main\java\
+In velocity-view-pager-library:
+* AndroidManifest.xml => velocityviewpagerlibrary\src\main\AndroidManifest.xml
+* assets\ => velocityviewpagerlibrary\src\main\assets\
+* res\ => velocityviewpagerlibrary\src\main\res\
+* src\ => velocityviewpagerlibrary\src\main\java\
+In view-pager-indicator-library:
+* AndroidManifest.xml => viewpagerindicatorlibrary\src\main\AndroidManifest.xml
+* assets\ => viewpagerindicatorlibrary\src\main\assets\
+* res\ => viewpagerindicatorlibrary\src\main\res\
+* src\ => viewpagerindicatorlibrary\src\main\java\
+In Jams Music Player:
+* AndroidManifest.xml => jamsMusicPlayer\src\main\AndroidManifest.xml
+* assets\ => jamsMusicPlayer\src\main\assets\
+* libs\android-async-http-1.4.2-66-g4b6eb97.jar => jamsMusicPlayer\libs\android-async-http-1.4.2-66-g4b6eb97.jar
+* libs\Android-BitmapCache-2.3.jar => jamsMusicPlayer\libs\Android-BitmapCache-2.3.jar
+* libs\cardview-v7-21.0.0-rc1-sources.jar => jamsMusicPlayer\libs\cardview-v7-21.0.0-rc1-sources.jar
+* libs\commons-io-2.4.jar => jamsMusicPlayer\libs\commons-io-2.4.jar
+* libs\commons-lang3-3.1.jar => jamsMusicPlayer\libs\commons-lang3-3.1.jar
+* libs\commons-logging.jar => jamsMusicPlayer\libs\commons-logging.jar
+* libs\dashclock-api-r2.0.jar => jamsMusicPlayer\libs\dashclock-api-r2.0.jar
+* libs\disklrucache-2.0.2.jar => jamsMusicPlayer\libs\disklrucache-2.0.2.jar
+* libs\google-http-client-1.16.0-rc.jar => jamsMusicPlayer\libs\google-http-client-1.16.0-rc.jar
+* libs\google-http-client-android-1.16.0-rc.jar => jamsMusicPlayer\libs\google-http-client-android-1.16.0-rc.jar
+* libs\jaudiotagger-2.0.4-20111207.115108-15.jar => jamsMusicPlayer\libs\jaudiotagger-2.0.4-20111207.115108-15.jar
+* libs\libGoogleAnalyticsServices.jar => jamsMusicPlayer\libs\libGoogleAnalyticsServices.jar
+* libs\prime-0.6.1.jar => jamsMusicPlayer\libs\prime-0.6.1.jar
+* libs\recyclerview-v7-21.0.0-rc1-sources.jar => jamsMusicPlayer\libs\recyclerview-v7-21.0.0-rc1-sources.jar
+* libs\universal-image-loader-1.9.0-with-sources.jar => jamsMusicPlayer\libs\universal-image-loader-1.9.0-with-sources.jar
+* lint.xml => jamsMusicPlayer\lint.xml
+* proguard-project.txt => jamsMusicPlayer\proguard-project.txt
+* res\ => jamsMusicPlayer\src\main\res\
+* src\ => jamsMusicPlayer\src\main\java\
+* src\com\android\vending\billing\IInAppBillingService.aidl => jamsMusicPlayer\src\main\aidl\com\android\vending\billing\IInAppBillingService.aidl
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)
