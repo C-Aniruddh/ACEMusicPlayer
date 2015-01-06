@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_gridview_dark" >
+
+    <TextView
+        android:id="@+id/songDurationListView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:layout_centerVertical="true"
+		android:layout_alignParentRight="true"
+        android:layout_marginRight="40dp"
+        android:text="0:00"
+        android:lines="1" 
+      	android:ellipsize="end" 
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <ImageView
+        android:id="@+id/songsListAlbumThumbnail"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_alignParentLeft="true"
+		android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+    
+    <LinearLayout
+        android:id="@+id/songCardContent"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/songsListAlbumThumbnail"
+        android:layout_toLeftOf="@+id/songDurationListView"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/songNameListView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="10dp"
+                android:ellipsize="marquee"
+                android:fadingEdge="horizontal"
+                android:gravity="bottom"
+                android:singleLine="true"
+                android:text="Song Name"
+                android:layout_marginRight="15dp"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+            
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:layout_weight="1" >
+            
+            <TextView
+                android:id="@+id/artistNameSongListView"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:fadingEdge="horizontal"
+                android:gravity="top"
+                android:text="Artist Name"
+                android:layout_marginRight="15dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#AAAAAA" />
+            
+        </RelativeLayout>
+        
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/overflow_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="?android:selectableItemBackground"
+        android:src="@drawable/ic_action_overflow_universal"
+        android:scaleX="0.75"
+        android:scaleY="0.75"/>
+
+</RelativeLayout>

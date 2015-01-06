@@ -1,0 +1,95 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:id="@+id/welcome_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:text="Scan Frequency"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/welcome_text_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/welcome_header"
+        android:layout_below="@+id/welcome_header"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/scan_frequency_instructions"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#FFFFFF" />
+
+    <RadioGroup
+        android:id="@+id/scan_frequency_radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/welcome_text_1"
+        android:layout_below="@+id/welcome_text_1"
+        android:layout_marginTop="30dp" >
+
+        <RadioButton
+            android:id="@+id/scan_every_startup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:text="@string/scan_every_startup" />
+
+        <RadioButton
+            android:id="@+id/scan_every_3_startups"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="10dp"
+            android:text="@string/scan_every_3_startups" />
+
+        <RadioButton
+            android:id="@+id/scan_every_5_startups"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="10dp"
+            android:text="@string/scan_every_5_startups" />
+        
+        <RadioButton
+            android:id="@+id/scan_every_10_startups"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="10dp"
+            android:text="@string/scan_every_10_startups" />
+                
+        <RadioButton
+            android:id="@+id/scan_every_20_startups"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="10dp"
+            android:text="@string/scan_every_20_startups" />
+        
+        <RadioButton
+            android:id="@+id/scan_manually"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="10dp"
+            android:checked="true"
+            android:text="@string/scan_manually" />
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/welcome_header"
+        android:layout_alignRight="@+id/welcome_text_1"
+        android:src="@drawable/scan_frequency_light" />
+
+</RelativeLayout>

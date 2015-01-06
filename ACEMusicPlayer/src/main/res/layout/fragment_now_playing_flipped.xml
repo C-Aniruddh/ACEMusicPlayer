@@ -1,0 +1,29 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    
+    <android.support.v4.view.ViewPager
+	    android:id="@+id/now_playing_flipped_pager"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    tools:context=".MainActivity_" 
+	    android:layout_weight="8">
+
+	    <!-- This title strip will display the currently page's title, as well as the
+	    titles for adjacent pages. -->
+
+		<android.support.v4.view.PagerTabStrip
+			android:id="@+id/now_playing_flipped_pager_title_strip"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="top"
+			android:background="#3C3C3C"
+			android:paddingBottom="4dp"
+			android:paddingTop="4dp"
+			android:textColor="#FFFFFF" />
+
+	</android.support.v4.view.ViewPager>
+
+</RelativeLayout>

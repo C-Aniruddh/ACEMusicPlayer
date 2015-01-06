@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+	    android:id="@+id/select_all_music_library_editor"
+	    android:orderInCategory="99"
+	    android:showAsAction="always|withText"
+	    android:icon="@drawable/select_all_light"
+	    android:title="@string/select_all"/>
+    	
+	<item
+	    android:id="@+id/done_music_library_editor"
+	    android:orderInCategory="100"
+	    android:showAsAction="always|withText"
+	    android:icon="@drawable/checkmark_light"
+	    android:title="@string/done"/>
+</menu>

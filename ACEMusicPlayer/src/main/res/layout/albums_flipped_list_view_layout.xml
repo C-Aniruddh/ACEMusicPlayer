@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/songDurationAlbumsFlippedListView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:layout_centerVertical="true"
+		android:layout_alignParentRight="true"
+        android:layout_marginRight="40dp"
+        android:text="0:00"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/songsListAlbumsFlippedTrack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="25dp"
+        android:layout_centerVertical="true"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+		android:text="1" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/songsListAlbumsFlippedTrack"
+        android:layout_alignTop="@+id/songsListAlbumsFlippedTrack"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/songsListAlbumsFlippedTrack"
+        android:layout_toLeftOf="@+id/songDurationAlbumsFlippedListView"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/songNameAlbumsFlippedListView"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:gravity="bottom"
+                android:text="Song Name"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.25" >
+            
+            <TextView
+                android:id="@+id/artistNameSongAlbumsFlippedListView"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:gravity="top"
+                android:text="Artist Name"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+            
+        </RelativeLayout>
+        
+    </LinearLayout>
+    
+    <ImageButton
+        android:id="@+id/overflow_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="?android:selectableItemBackground"
+        android:src="@drawable/ic_action_overflow_universal"
+        android:scaleX="0.70"
+        android:scaleY="0.80"/>
+
+</RelativeLayout>

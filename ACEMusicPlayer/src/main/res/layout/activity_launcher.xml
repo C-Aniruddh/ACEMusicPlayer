@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/launcher_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+ 	<RelativeLayout
+        android:id="@+id/building_music_library_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/building_music_library_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="21dp"
+            android:text="@string/jams_is_building_library"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/building_music_library_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/building_music_library_text"
+            android:layout_alignRight="@+id/building_music_library_text"
+            android:layout_below="@+id/building_music_library_text"
+            android:layout_margin="10dp"
+            android:text="@string/jams_is_building_library_info"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/building_music_library_text"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+    
+</RelativeLayout>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceCategory
+        android:key="upgrade_pref_category"
+        android:summary="@string/upgrade"
+        android:title="@string/upgrade" >
+        
+        <Preference
+			android:key="preference_key_upgrade"
+			android:title="@string/upgrade_to_full_version"
+			android:icon="@drawable/checkmark" />
+        
+    </PreferenceCategory>
+    
+	<PreferenceCategory
+		android:summary="@string/customization"
+		android:title="@string/customization" >
+		
+		<Preference
+			android:key="preference_key_app_theme"
+			android:title="@string/application_theme"
+			android:icon="@drawable/color_palette" />
+		
+		<Preference
+			android:key="preference_key_player_color_scheme"
+			android:title="@string/player_color_scheme"
+			android:icon="@drawable/color_palette_play" />
+		
+		<Preference
+			android:key="preference_key_track_change_animation"
+			android:title="@string/track_change_animation"
+			android:icon="@drawable/customize_screens" />
+		
+		<Preference
+			android:key="preference_key_startup_screen"
+			android:title="@string/startup_screen"
+			android:icon="@drawable/default_screen" />
+		
+		<Preference
+			android:key="preference_key_artists_layout"
+			android:title="@string/artists_layout"
+			android:icon="@drawable/mic" />
+		
+		<Preference
+			android:key="preference_key_album_artists_layout"
+			android:title="@string/album_artists_layout"
+			android:icon="@drawable/album_artists" />
+		
+		<Preference
+			android:key="preference_key_albums_layout"
+			android:title="@string/albums_layout"
+			android:icon="@drawable/albums" />
+		
+		<Preference
+			android:key="preference_key_lockscreen_controls"
+			android:title="@string/lockscreen_controls"
+			android:icon="@drawable/lockscreen_controls" />
+		
+	</PreferenceCategory>
+	
+	<PreferenceCategory
+		android:summary="@string/music_library"
+		android:title="@string/music_library" >
+		
+	    <Preference
+			android:key="preference_key_select_folders"
+			android:title="@string/select_folders"
+			android:icon="@drawable/folders_settings" />
+	    
+		<Preference
+			android:key="preference_key_rescan_folders"
+			android:title="@string/rebuild_music_library"
+			android:icon="@drawable/rescan" />
+		
+		<Preference
+			android:key="preference_key_scan_frequency"
+			android:title="@string/scan_frequency"
+			android:icon="@drawable/scan_frequency" />
+		
+	</PreferenceCategory>
+	
+	<PreferenceCategory
+		android:summary="@string/google_play_music_no_asterisk"
+		android:title="@string/google_play_music_no_asterisk" >
+		
+		<Preference
+			android:key="preference_key_google_play_music_account"
+			android:title="@string/google_play_music_account"
+			android:icon="@drawable/accounts" />
+		
+		<Preference
+			android:key="preference_key_get_pinned_songs"
+			android:title="@string/get_pinned_songs"
+			android:icon="@drawable/pin" />
+		
+	</PreferenceCategory>
+	
+	<PreferenceCategory 
+	    android:summary="@string/folders"
+	    android:title="@string/folders">
+	    
+	    <Preference
+	        android:key="preference_key_default_folder"
+	        android:title="@string/default_folder_for_folders_view"
+	        android:icon="@drawable/folders_settings" />
+	    
+	</PreferenceCategory>
+	
+	<PreferenceCategory
+		android:summary="@string/music_libraries"
+		android:title="@string/music_libraries" >
+		
+		<Preference
+			android:key="preference_key_add_music_library"
+			android:title="@string/add_music_library"
+			android:icon="@drawable/add_new_library" />
+		
+		<Preference
+			android:key="preference_key_edit_music_library"
+			android:title="@string/edit_music_library"
+			android:icon="@drawable/edit_library" />
+		
+		<Preference
+			android:key="preference_key_delete_music_library"
+			android:title="@string/delete_music_library"
+			android:icon="@drawable/delete_library" />
+		
+	</PreferenceCategory>
+		 
+	<PreferenceCategory
+		android:summary="@string/album_art"
+		android:title="@string/album_art" >
+		
+	    <Preference
+			android:key="preference_key_album_art_style"
+			android:title="@string/album_art_style"
+			android:icon="@drawable/cover_art_icon" />
+	    
+		<Preference
+			android:key="preference_key_album_art_sources"
+			android:title="@string/album_art_sources"
+			android:icon="@drawable/album_art_source" />
+		
+		<Preference
+			android:key="preference_key_scan_download_album_art"
+			android:title="@string/scan_download_album_art"
+			android:icon="@drawable/auto_cover_fetch" />
+		
+	</PreferenceCategory>
+
+	<PreferenceCategory
+		android:summary="@string/blacklists"
+		android:title="@string/blacklists" >
+		
+	    <Preference
+			android:key="preference_key_blacklist_manager"
+			android:title="@string/blacklist_manager"
+			android:icon="@drawable/manage_blacklists" />
+	    
+	    <Preference
+			android:key="preference_key_unblacklist_all"
+			android:title="@string/reset_blacklist"
+			android:icon="@drawable/unblacklist_all" />
+		
+	</PreferenceCategory>
+	
+	<PreferenceCategory
+		android:summary="@string/scrobbling"
+		android:title="@string/scrobbling" >
+		
+		<Preference
+			android:key="preference_key_scrobbling"
+			android:title="@string/scrobbling"
+			android:icon="@drawable/scrobbling" />
+		
+	</PreferenceCategory>
+	
+	<PreferenceCategory
+		android:summary="@string/audio_settings"
+		android:title="@string/audio_settings" >
+		
+		<Preference
+			android:key="preference_key_headphones_unplug_action"
+			android:title="@string/headphones_unplug_action"
+			android:icon="@drawable/headphones" />
+		
+		<Preference
+			android:key="preference_key_crossfade_tracks"
+			android:title="@string/crossfade_tracks"
+			android:icon="@drawable/crossfade_tracks" />
+		
+		<Preference
+			android:key="preference_key_crossfade_tracks_duration"
+			android:title="@string/crossfade_duration"
+			android:icon="@drawable/crossfade_tracks" />
+		
+		<Preference
+			android:key="preference_key_equalizer_toggle"
+			android:title="@string/equalizer"
+			android:icon="@drawable/equalizer" />
+		
+	</PreferenceCategory>
+	
+	<PreferenceCategory
+		android:summary="@string/licenses_and_about"
+		android:title="@string/licenses_and_about" >
+		
+	    <Preference
+			android:key="preference_key_licenses"
+			android:title="@string/licenses"
+			android:icon="@drawable/licenses" />
+	    
+		<Preference
+			android:key="preference_key_contact_us"
+			android:title="@string/contact_us"
+			android:icon="@drawable/contact_us" />
+		
+	</PreferenceCategory>
+
+</PreferenceScreen>

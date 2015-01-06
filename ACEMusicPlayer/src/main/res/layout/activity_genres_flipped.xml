@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AlbumsFlippedActivity"
+    android:orientation="vertical" >
+    
+	<LinearLayout
+	    android:id="@+id/artists_flipped_layout"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical"
+	    android:layout_weight="8" >
+	
+	</LinearLayout>
+	
+	<RelativeLayout android:id="@+id/now_playing_footer_layout"
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content" 
+    	android:layout_weight="2" 
+    	android:visibility="visible" >
+        
+        <RelativeLayout
+            android:id="@+id/now_playing_footer_content_layout"
+            android:background="#141B38"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+	        
+		    <ImageView
+		        android:id="@+id/now_playing_footer_thumbnail"
+		        android:layout_width="75dp"
+		        android:layout_height="75dp"
+		        android:layout_alignParentLeft="true"
+		        android:layout_alignParentTop="true"
+		        android:src="@drawable/default_album_art"
+		        android:layout_marginBottom="50dp" />
+	
+		    <TextView
+		        android:id="@+id/now_playing_text"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentTop="true"
+		        android:layout_toRightOf="@+id/now_playing_footer_thumbnail"
+		        android:layout_marginLeft="10dp"
+		        android:layout_marginTop="10dp"
+		        android:ellipsize="end"
+		        android:gravity="left"
+		        android:lines="1"
+		        android:text="@string/now_playing_caps"
+		        android:textColor="#BBBFBE"
+		        android:textAppearance="?android:attr/textAppearanceSmall" />
+	
+		    <TextView
+		        android:id="@+id/now_playing_song_artist_text"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignLeft="@+id/now_playing_text"
+		        android:layout_alignParentRight="true"
+		        android:layout_below="@+id/now_playing_text"
+		        android:ellipsize="end"
+		        android:lines="1"
+		        android:text="Song Title - Artist Name"
+		        android:layout_marginRight="10dp"
+		        android:textColor="#FFFFFF"
+		        android:textAppearance="?android:attr/textAppearanceMedium" />
+            
+        </RelativeLayout>
+
+	</RelativeLayout>
+	
+</LinearLayout>

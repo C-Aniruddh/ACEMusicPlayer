@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sliding_menu_array">
+        <item>Artists</item>
+        <item>Album Artists</item>
+        <item>Albums</item>
+        <item>Songs</item>
+        <item>Playlists</item>
+        <item>Genres</item>
+        <item>Folders</item>
+        <item>Settings</item>
+    </string-array>
+    
+    <string-array name="animations">
+        <item >Slide Away</item>
+        <item >Zoom out and Slide Away</item>
+        <item >Depth Transformer</item>
+    </string-array>
+    
+    <string-array name="enable_disable">
+        <item >Enable</item>
+        <item >Disable</item>
+    </string-array>
+    
+    <string-array name="headphones_unplug_actions">
+        <item >Do nothing</item>
+        <item >Pause music playback</item>
+    </string-array>
+    
+    <string-array name="album_art_sources">
+        <item >Prefer embedded art</item>
+        <item >Prefer folder art</item>
+        <item >Use embedded art only</item>
+        <item >Use folder art only</item>
+    </string-array>
+    
+    <string-array name="scrobbling_options">
+        <item>Don\'t Scrobble</item>
+        <item>Simple Last.fm Scrobbler</item>
+        <item>ScrobbleDroid</item>
+    </string-array>
+    
+    <string-array name="show_more_menu">
+        <item>Go to artist</item> 
+        <item>Go to album artist</item> 
+        <item>Go to album</item> 
+        <item>Go to genre</item> 
+    </string-array>
+    
+    <string-array name="widget_color_options">
+        <item>Light</item> 
+        <item>Dark</item> 
+    </string-array>
+
+</resources>

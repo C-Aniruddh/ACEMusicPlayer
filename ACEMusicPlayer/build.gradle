@@ -1,0 +1,75 @@
+apply plugin: 'android'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion '21.1'
+
+    defaultConfig {
+        applicationId "com.aniruddhc.acemusic.player"
+        minSdkVersion 15
+        targetSdkVersion 21
+
+        //RenderScript backward compatibility for guassian blurs.
+        renderscriptTargetApi 19
+
+    }
+
+    buildTypes {
+        release {
+
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+        }
+        debug {
+            proguardFile 'E:/AceMusic/JamsMusicPlayer-master/jamsMusicPlayer/proguard-project.txt'
+        }
+    }
+
+    /**
+     * Bug in Gradle v0.7.1. The LICENSE and NOTICE files in the Apache Commons
+     * library jars need to be excluded or the project won't compile/build.
+     */
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://oss.sonatype.org/content/repositories/snapshots/"
+    }
+}
+android {
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+}
+dependencies {
+    compile project(':licensesdialoglibrary')
+    compile project(':quickScroll')
+    compile project(':velocityviewpagerlibrary')
+    compile project(':dragsortlistviewlibrary')
+    compile project(':viewpagerindicatorlibrary')
+    compile project(':circularImageView')
+    compile project(':picasso')
+    compile files('libs/android-async-http-1.4.2-66-g4b6eb97.jar')
+    compile files('libs/commons-io-2.4.jar')
+    compile files('libs/commons-lang3-3.1.jar')
+    compile files('libs/commons-logging.jar')
+    compile files('libs/dashclock-api-r2.0.jar')
+    compile files('libs/google-http-client-1.16.0-rc.jar')
+    compile files('libs/google-http-client-android-1.16.0-rc.jar')
+    compile files('libs/jaudiotagger-2.0.4-20111207.115108-15.jar')
+    compile files('libs/libGoogleAnalyticsServices.jar')
+    compile files('libs/universal-image-loader-1.9.3-with-sources.jar')
+    compile files('libs/com.haarman.listviewanimations-2.6.0.jar')
+    compile files('libs/nineoldandroids-2.4.0.jar')
+    compile files('libs/renderscript-v8.jar')
+    compile 'com.github.traex.rippleeffect:library:1.1.1'
+    compile 'com.android.support:support-v4:21.+'
+    compile 'com.google.android.gms:play-services:6.1.+'
+}

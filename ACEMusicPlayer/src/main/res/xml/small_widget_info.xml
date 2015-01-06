@@ -1,0 +1,11 @@
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+	android:minHeight="60dp"
+	android:minWidth="225dp"
+	android:previewImage="@drawable/small_widget_preview"
+    android:updatePeriodMillis="86400000"
+    android:initialLayout="@layout/small_widget_layout"
+    android:widgetCategory="home_screen|keyguard"
+    android:initialKeyguardLayout="@layout/small_widget_layout"
+    android:configure="com.aniruddhc.acemusic.player.WidgetProviders.SmallWidgetConfigActivity"
+    android:resizeMode="vertical|horizontal" >
+</appwidget-provider>

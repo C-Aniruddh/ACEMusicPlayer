@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/notification_base"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    tools:ignore="ContentDescription" >
+
+    <ImageView
+        android:id="@+id/notification_base_image"
+        android:layout_width="@dimen/notification_big_icon_width"
+        android:layout_height="@dimen/notification_big_icon_height"
+        android:gravity="center" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/notification_info_container_padding_left"
+        android:paddingBottom="@dimen/notification_info_container_padding_bottom" >
+
+        <TextView
+            android:id="@+id/notification_base_line_one"
+            style="@style/NotificationText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent.Title" />
+
+        <TextView
+            android:id="@+id/notification_base_line_two"
+            style="@style/NotificationText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/notification_base_previous"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       	style="@style/NotificationAction.Previous" />
+
+    <ImageButton
+        android:id="@+id/notification_base_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/NotificationAction.Play"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp" />
+
+    <ImageButton
+        android:id="@+id/notification_base_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/NotificationAction.Next" />
+
+    <ImageButton
+        android:id="@+id/notification_base_collapse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/NotificationAction.Collapse"
+        android:paddingLeft="15dp"
+        android:paddingRight="10dp" />
+
+</LinearLayout>

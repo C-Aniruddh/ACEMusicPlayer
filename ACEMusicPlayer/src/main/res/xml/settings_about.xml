@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference
+        android:key="preference_key_about_app"
+        android:title="Purchase ACEMusic"
+        android:summary="Like the app? Purchase it, if you haven't, already ;)" />
+    <Preference
+        android:key="preference_key_player_base_license"
+        android:title="Contact me"
+        android:summary="Contact me via e-mail" />
+    <Preference
+        android:key="preference_key_about_dev"
+        android:title="Secondary development and maintenance by :"
+        android:summary="Aniruddh Chandratre (ace312)" />
+    <Preference
+        android:key="preference_key_special_thanks"
+        android:title="Special Thanks to:"
+        android:summary="Saravan Pantham (Jams)" />
+    <Preference
+        android:key="preference_key_license"
+        android:title="Base Music Player license"
+        android:summary="View the codebase open source license" />
+    <Preference
+        android:key="preference_key_license_short"
+        android:title="The in-app notice"
+        android:summary="The required In-app notice." />
+</PreferenceScreen>

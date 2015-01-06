@@ -1,0 +1,57 @@
+<RelativeLayout android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/now_playing_controls_background_light" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/welcome_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/music_library"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#0099CC"
+        android:textSize="40sp" />
+
+    <RadioGroup
+        android:id="@+id/music_library_welcome_radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/welcome_header"
+        android:layout_below="@+id/welcome_header"
+        android:layout_marginTop="25dp" >
+
+        <RadioButton
+            android:id="@+id/get_all_songs_radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/get_all_songs_device"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <RadioButton
+            android:id="@+id/pick_folders_radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/let_me_pick_folders"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </RadioGroup>
+
+    <RelativeLayout
+        android:id="@+id/folders_fragment_holder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_below="@+id/music_library_welcome_radio_group"
+        android:layout_alignParentBottom="true" >
+
+    </RelativeLayout>
+
+</RelativeLayout>

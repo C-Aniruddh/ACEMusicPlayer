@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:id="@+id/caution_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:paddingBottom="15dp"
+        android:text="@string/caution_albums_text"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <CheckBox
+        android:id="@+id/dont_show_again_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/caution_text"
+        android:layout_below="@+id/caution_text" />
+
+    <TextView
+        android:id="@+id/dont_show_again_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/dont_show_again_checkbox"
+        android:layout_alignBottom="@+id/dont_show_again_checkbox"
+        android:layout_toRightOf="@+id/dont_show_again_checkbox"
+        android:text="@string/dont_show_again"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+</RelativeLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/genres_flipped_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/genres_flipped_layout"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent" 
+	    android:orientation="vertical" >
+	    
+        <RelativeLayout
+	        android:id="@+id/genres_flipped_header"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_weight="3" >
+	        
+            <ImageView
+	            android:id="@+id/genres_flipped_header_image"
+	            android:layout_width="fill_parent"
+	            android:layout_height="fill_parent"
+	            android:layout_centerHorizontal="true"
+	            android:layout_centerVertical="true"
+	            android:scaleType="centerCrop"
+	            android:adjustViewBounds="true"
+	            android:src="@drawable/default_header_image" />
+	
+	    </RelativeLayout>
+	
+	    <RelativeLayout
+	        android:id="@+id/ll3"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1" >
+	        
+	        <TextView
+        		android:id="@+id/empty_view_text"
+		        android:visibility="invisible"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerHorizontal="true"
+		        android:layout_centerVertical="true"
+		        android:hint="@string/no_genres_found_try_another_library"
+		        android:gravity="center"
+		        android:layout_marginLeft="25dp"
+		        android:layout_marginRight="25dp"
+		        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    		<ImageView
+		        android:id="@+id/empty_view_image"
+		        android:visibility="invisible"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_above="@+id/empty_view_text"
+		        android:layout_centerHorizontal="true"
+		        android:src="@drawable/genres_light" />
+    		
+	     	<ListView
+	            android:layout_height="wrap_content" 
+	            android:layout_width="match_parent" 
+	            android:id="@+id/genres_flipped_listview" 
+	           	android:layout_alignParentTop="true"
+	            android:layout_centerHorizontal="true" 
+	            android:drawSelectorOnTop="true"
+	            android:visibility="invisible" />
+	
+	    </RelativeLayout>
+        
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/equalizer"
+        android:title="@string/equalizer" />
+
+    <item
+        android:id="@+id/a_b_repeat"
+        android:title="@string/a_b_repeat" />
+
+    <item  
+	    android:id="@+id/show_embedded_lyrics"  
+	    android:title="@string/show_embedded_lyrics"/>
+
+    <item
+        android:id="@+id/current_queue"
+        android:title="@string/current_queue" />
+
+    <item
+        android:id="@+id/save_clear_current_position"
+        android:title="@string/save_current_position"/>
+
+	<item
+	    android:id="@+id/go_to"
+	    android:title="@string/go_to" />
+</menu>

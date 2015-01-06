@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_grid_view_root_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+	android:focusableInTouchMode="true" >
+
+    <RelativeLayout
+        android:id="@+id/fragment_grid_view_frontal_layout"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+        android:layout_marginLeft="4.5dp"
+        android:layout_marginRight="4.5dp"
+        android:layout_alignParentTop="true">
+	    
+ 	   	<GridView
+ 	   	    android:id="@+id/generalGridView"
+ 	   	    android:layout_width="match_parent"
+ 	   	    android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+ 	   	    android:drawSelectorOnTop="true"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:verticalSpacing="3dp"
+            android:horizontalSpacing="3dp" />
+ 	    
+ 	    <com.andraskindler.quickscroll.QuickScrollGridView
+			android:id="@+id/quickscrollgrid"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_alignParentTop="true"
+			android:layout_alignParentBottom="true"
+			android:layout_marginTop="10dp"
+			android:layout_marginBottom="10dp"
+			android:layout_marginRight="5dp"
+			android:visibility="invisible" />
+	    
+    </RelativeLayout>
+ 	
+ 	<TextView
+        android:id="@+id/empty_view_text"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:textColor="#0099CC"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>

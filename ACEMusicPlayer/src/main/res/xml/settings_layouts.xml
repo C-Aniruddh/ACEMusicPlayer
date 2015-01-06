@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Preference
+        android:key="preference_key_artists_layout"
+        android:title="@string/artists_layout" />
+
+    <Preference
+        android:key="preference_key_album_artists_layout"
+        android:title="@string/album_artists_layout" />
+
+    <Preference
+        android:key="preference_key_albums_layout"
+        android:title="@string/albums_layout" />
+
+    <Preference
+        android:key="preference_key_playlists_layout"
+        android:title="@string/playlists_layout" />
+
+    <Preference
+        android:key="preference_key_genres_layout"
+        android:title="@string/genres_layout" />
+
+    <Preference
+        android:key="preference_key_folders_layout"
+        android:title="@string/folders_layout" />
+
+</PreferenceScreen>

@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/action_search"
+        android:title="@string/search"
+        android:icon="@android:color/transparent"
+        android:showAsAction=""
+        android:orderInCategory="100" />
+    
+    <item 
+        android:id="@+id/action_queue_drawer"
+        android:title="@string/current_queue"
+        android:icon="@drawable/queue_drawer_light"
+        android:showAsAction="always"
+        android:orderInCategory="99" />
+
+</menu>

@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/enter_google_play_credentials"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:text="@string/enter_google_play_credentials"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <EditText
+        android:id="@+id/google_play_username_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/enter_google_play_credentials"
+        android:layout_alignRight="@+id/enter_google_play_credentials"
+        android:layout_below="@+id/enter_google_play_credentials"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="@string/username" >
+    </EditText>
+
+    <EditText
+        android:id="@+id/google_play_password_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/google_play_username_field"
+        android:layout_alignRight="@+id/google_play_username_field"
+        android:layout_below="@+id/google_play_username_field"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="10dp"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword" />
+
+</RelativeLayout>

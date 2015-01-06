@@ -1,0 +1,331 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            
+		    <TextView
+		        android:id="@+id/edit_title_text"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentLeft="true"
+		        android:layout_alignParentTop="true"
+		        android:layout_marginLeft="15dp"
+		        android:layout_marginTop="50dp"
+		        android:text="@string/title"
+		        android:textAppearance="?android:attr/textAppearanceSmall" />
+		
+		    <EditText
+		        android:id="@+id/edit_title_field"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignBottom="@+id/edit_title_text"
+		        android:layout_marginBottom="-5dp"
+		        android:layout_marginLeft="10dp"
+		        android:layout_toLeftOf="@+id/title_checkbox"
+		        android:layout_toRightOf="@+id/edit_title_text"
+		        android:ems="10"
+		        android:scrollHorizontally="true"
+		        android:singleLine="true" >
+		
+		    </EditText>
+		
+		    <TextView
+		        android:id="@+id/edit_artist_text"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignLeft="@+id/edit_title_text"
+		        android:layout_below="@+id/edit_title_text"
+		        android:layout_marginTop="30dp"
+		        android:text="@string/artist"
+		        android:textAppearance="?android:attr/textAppearanceSmall" />
+		
+		    <TextView
+		        android:id="@+id/edit_album_artist_text"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignLeft="@+id/edit_artist_text"
+		        android:layout_below="@+id/edit_artist_field"
+		        android:layout_marginTop="30dp"
+		        android:text="@string/album_artist"
+		        android:textAppearance="?android:attr/textAppearanceSmall" />
+		
+		    <EditText
+		        android:id="@+id/edit_artist_field"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignBottom="@+id/edit_artist_text"
+		        android:layout_alignRight="@+id/edit_title_field"
+		        android:layout_toRightOf="@+id/edit_artist_text"
+		        android:layout_marginBottom="-5dp"
+		        android:layout_marginLeft="10dp"
+		        android:singleLine="true"
+		        android:scrollHorizontally="true"
+		        android:ems="10" />
+		
+		    <EditText
+		        android:id="@+id/edit_album_artist_field"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignBottom="@+id/edit_album_artist_text"
+		        android:layout_alignRight="@+id/edit_artist_field"
+		        android:layout_marginBottom="-5dp"
+		        android:singleLine="true"
+		        android:scrollHorizontally="true"
+		        android:layout_marginLeft="10dp"
+		        android:layout_toRightOf="@+id/edit_album_artist_text"
+		        android:ems="10" />
+		
+		    <TextView
+		        android:id="@+id/edit_album_text"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignLeft="@+id/edit_album_artist_text"
+		        android:layout_below="@+id/edit_album_artist_text"
+		        android:layout_marginTop="30dp"
+		        android:text="@string/album"
+		        android:textAppearance="?android:attr/textAppearanceSmall" />
+		
+		    <EditText
+		        android:id="@+id/edit_album_field"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignBottom="@+id/edit_album_text"
+		        android:layout_alignRight="@+id/edit_album_artist_field"
+		        android:layout_toRightOf="@+id/edit_album_text"
+		        android:layout_marginBottom="-5dp"
+		        android:layout_marginLeft="10dp"
+		        android:singleLine="true"
+		        android:scrollHorizontally="true"
+		        android:ems="10" />
+		
+		    <TextView
+		        android:id="@+id/edit_genre_text"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignLeft="@+id/edit_album_text"
+		        android:layout_below="@+id/edit_album_text"
+		        android:layout_marginTop="30dp"
+		        android:text="@string/genre"
+		        android:textAppearance="?android:attr/textAppearanceSmall" />
+		
+		    <EditText
+		        android:id="@+id/edit_genre_field"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignBottom="@+id/edit_genre_text"
+		        android:layout_alignRight="@+id/edit_album_field"
+		        android:layout_toRightOf="@+id/edit_genre_text"
+		        android:layout_marginBottom="-5dp"
+		        android:layout_marginLeft="10dp"
+		        android:singleLine="true"
+		        android:scrollHorizontally="true"
+		        android:ems="10" />
+		
+		    <TextView
+		        android:id="@+id/edit_producer_text"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignLeft="@+id/edit_genre_text"
+		        android:layout_below="@+id/edit_genre_text"
+		        android:layout_marginTop="30dp"
+		        android:text="@string/producer"
+		        android:textAppearance="?android:attr/textAppearanceSmall" />
+		
+		    <EditText
+		        android:id="@+id/edit_producer_field"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignBottom="@+id/edit_producer_text"
+		        android:layout_alignRight="@+id/edit_genre_field"
+		        android:layout_toRightOf="@+id/edit_producer_text"
+		        android:layout_marginBottom="-5dp"
+		        android:layout_marginLeft="10dp"
+		        android:singleLine="true"
+		        android:scrollHorizontally="true"
+		        android:ems="10" />
+		
+		    <TextView
+		        android:id="@+id/edit_year_text"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignLeft="@+id/edit_producer_text"
+		        android:layout_below="@+id/edit_producer_text"
+		        android:text="@string/year"
+		        android:layout_marginTop="30dp"
+		        android:textAppearance="?android:attr/textAppearanceSmall" />
+		
+		    <EditText
+		        android:id="@+id/edit_year_field"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignBottom="@+id/edit_year_text"
+		        android:layout_alignRight="@+id/edit_producer_field"
+		        android:layout_marginBottom="-5dp"
+		        android:layout_marginLeft="10dp"
+		        android:layout_toRightOf="@+id/edit_year_text"
+		        android:ems="10"
+		        android:singleLine="true"
+		        android:scrollHorizontally="true"
+		        android:inputType="number" />
+		
+		    <TextView
+		        android:id="@+id/edit_track_text"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignLeft="@+id/edit_year_text"
+		        android:layout_below="@+id/edit_year_text"
+		        android:layout_marginTop="30dp"
+		        android:text="@string/track"
+		        android:textAppearance="?android:attr/textAppearanceSmall" />
+		
+		    <EditText
+		        android:id="@+id/edit_track_field"
+		        android:layout_width="50dp"
+		        android:layout_height="wrap_content"
+		        android:layout_alignBottom="@+id/edit_track_text"
+		        android:layout_marginBottom="-5dp"
+		        android:layout_marginLeft="10dp"
+		        android:layout_toRightOf="@+id/edit_track_text"
+		        android:ems="10"
+		        android:inputType="number" />
+		
+		    <TextView
+		        android:id="@+id/text_of"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignBaseline="@+id/edit_track_text"
+		        android:layout_alignBottom="@+id/edit_track_text"
+		        android:layout_toRightOf="@+id/edit_track_field"
+		        android:text="@string/of"
+		        android:layout_marginLeft="10dp"
+		        android:textAppearance="?android:attr/textAppearanceSmall" />
+		
+		    <EditText
+		        android:id="@+id/edit_track_total_field"
+		        android:layout_width="50dp"
+		        android:layout_height="wrap_content"
+		        android:layout_alignBottom="@+id/edit_track_field"
+		        android:layout_marginLeft="10dp"
+		        android:layout_toRightOf="@+id/text_of"
+		        android:ems="10"
+		        android:singleLine="true"
+		        android:scrollHorizontally="true"
+		        android:inputType="number" />
+		
+		    <TextView
+		        android:id="@+id/edit_comment_text"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignLeft="@+id/edit_track_text"
+		        android:layout_below="@+id/edit_track_total_field"
+		        android:layout_marginTop="30dp"
+		        android:text="@string/comments"
+		        android:textAppearance="?android:attr/textAppearanceSmall" />
+		
+		    <EditText
+		        android:id="@+id/edit_comment_field"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignLeft="@+id/edit_comment_text"
+		        android:layout_alignRight="@+id/edit_year_field"
+		        android:layout_below="@+id/edit_comment_text"
+		        android:ems="10" />
+		
+		    <CheckBox
+		        android:id="@+id/title_checkbox"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignBaseline="@+id/edit_title_text"
+		        android:layout_alignBottom="@+id/edit_title_text"
+		        android:layout_marginRight="15dp"
+		        android:layout_alignParentRight="true" />
+		
+		    <CheckBox
+		        android:id="@+id/artist_checkbox"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignBottom="@+id/edit_artist_field"
+		        android:layout_alignLeft="@+id/title_checkbox" />
+		
+		    <CheckBox
+		        android:id="@+id/album_checkbox"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignBaseline="@+id/edit_album_artist_field"
+		        android:layout_alignBottom="@+id/edit_album_artist_field"
+		        android:layout_alignLeft="@+id/artist_checkbox" />
+		
+		    <CheckBox
+		        android:id="@+id/album_artist_checkbox"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignBaseline="@+id/edit_album_field"
+		        android:layout_alignBottom="@+id/edit_album_field"
+		        android:layout_alignLeft="@+id/album_checkbox" />
+		
+		    <CheckBox
+		        android:id="@+id/genre_checkbox"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignBaseline="@+id/edit_genre_field"
+		        android:layout_alignBottom="@+id/edit_genre_field"
+		        android:layout_alignLeft="@+id/album_artist_checkbox" />
+		
+		    <CheckBox
+		        android:id="@+id/producer_checkbox"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignBaseline="@+id/edit_producer_text"
+		        android:layout_alignBottom="@+id/edit_producer_text"
+		        android:layout_alignLeft="@+id/genre_checkbox" />
+		
+		    <CheckBox
+		        android:id="@+id/year_checkbox"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignBaseline="@+id/edit_year_field"
+		        android:layout_alignBottom="@+id/edit_year_field"
+		        android:layout_alignLeft="@+id/producer_checkbox" />
+		
+		    <CheckBox
+		        android:id="@+id/track_checkbox"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignBaseline="@+id/text_of"
+		        android:layout_alignBottom="@+id/text_of"
+		        android:layout_toRightOf="@+id/edit_year_field" />
+		
+		    <CheckBox
+		        android:id="@+id/comment_checkbox"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignBaseline="@+id/edit_comment_field"
+		        android:layout_alignBottom="@+id/edit_comment_field"
+		        android:layout_alignLeft="@+id/track_checkbox" />
+            
+        </RelativeLayout>
+        
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:text="@string/edit"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+</RelativeLayout>

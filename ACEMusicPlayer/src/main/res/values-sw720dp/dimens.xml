@@ -1,0 +1,14 @@
+<resources>
+
+    <!--
+         Customize dimensions originally defined in res/values/dimens.xml (such as
+         screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
+    -->
+    <dimen name="activity_horizontal_margin">128dp</dimen>
+    <dimen name="slidingmenu_offset">600dp</dimen>
+
+    <!-- KitKat Navigation Bar Margins -->
+    <dimen name="kitkat_nav_bar_margin">0dp</dimen>
+    <dimen name="kitkat_nav_bar_margin_large">30dp</dimen>
+    
+</resources>

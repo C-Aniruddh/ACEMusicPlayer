@@ -1,0 +1,83 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/now_playing_controls_background_light" >
+
+    <TextView
+        android:id="@+id/welcome_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/google_play_music"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#0099CC"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:textSize="35sp" />
+
+    <TextView
+        android:id="@+id/welcome_text_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/welcome_header"
+        android:layout_below="@+id/welcome_header"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/google_play_music_instructions"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <ScrollView
+        android:id="@+id/google_play_music_radio_group_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/google_play_music_disclaimer"
+        android:layout_alignLeft="@+id/welcome_text_1"
+        android:layout_alignRight="@+id/google_play_music_disclaimer"
+        android:layout_below="@+id/welcome_text_1"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:fadeScrollbars="false" >
+    	
+		<RadioGroup
+	        android:id="@+id/google_play_music_radio_group"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" />      
+	         
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/google_play_music_disclaimer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/google_play_music_disclaimer"
+        android:textSize="12sp"
+        android:layout_above="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="25dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/welcome_gplay_warning"
+        android:id="@+id/textView"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="51dp"
+        android:layout_marginLeft="25dp"/>
+
+    <Space
+        android:layout_width="20px"
+        android:layout_height="20px"
+        android:layout_above="@+id/textView"
+        android:layout_alignRight="@+id/google_play_music_disclaimer"
+        android:layout_alignEnd="@+id/google_play_music_disclaimer"
+        android:layout_below="@+id/google_play_music_disclaimer"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

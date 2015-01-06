@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<notices>
+    <notice>
+        <name>Apache Commons IO</name>
+        <url>http://commons.apache.org/io/</url>
+        <copyright>Copyright 2002-2012 The Apache Software Foundation</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
+    
+    <notice>
+        <name>Apache Commons Lang</name>
+        <url>http://commons.apache.org/lang/</url>
+        <copyright>Copyright 2002-2012 The Apache Software Foundation</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
+    
+    <notice>
+        <name>Apache Commons Logging</name>
+        <url>http://commons.apache.org/logging/</url>
+        <copyright>Copyright 2002-2012 The Apache Software Foundation</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
+    
+    <notice>
+        <name>DragSortListView</name>
+        <url>https://github.com/bauerca/drag-sort-listview/</url>
+        <license>Apache Software License 2.0</license>
+    </notice>
+    
+    <notice>
+        <name>LicensesDialog</name>
+        <url>https://github.com/PSDev/LicensesDialog/</url>
+        <license>Apache Software License 2.0</license>
+    </notice>
+
+    <notice>
+        <name>SlidingMenu</name>
+        <url>https://github.com/jfeinstein10/SlidingMenu/</url>
+        <copyright>Copyright 2012 Jeremy Feinstein</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
+    
+    <notice>
+        <name>Android ViewPagerIndicator</name>
+        <url>https://github.com/JakeWharton/Android-ViewPagerIndicator/</url>
+        <copyright>Copyright 2012 Jake Wharton, Copyright 2011 Patrik Åkerfeldt, Copyright 2011 Francisco Figueiredo Jr.</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
+    
+    <notice>
+        <name>Asynchronous Http Client for Android</name>
+        <url>https://github.com/loopj/android-async-http/</url>
+        <license>Apache Software License 2.0</license>
+    </notice>
+    
+    <notice>
+        <name>Android-BitmapCache</name>
+        <url>https://github.com/chrisbanes/Android-BitmapCache/</url>
+        <copyright>Copyright 2011, 2012, 2013 Chris Banes</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
+    
+    <notice>
+        <name>Android Support Library</name>
+        <url>http://developer.android.com/tools/support-library/index.html/</url>
+        <copyright>Copyright (C) 2011 The Android Open Source Project</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
+    
+    <notice>
+        <name>Google Play Services</name>
+        <copyright>Copyright (C) 2013 The Android Open Source Project</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
+    
+    <notice>
+        <name>Disk LRU Cache</name>
+        <copyright>Copyright 2012 Jake Wharton, Copyright 2011 The Android Open Source Project</copyright>
+        <url>https://github.com/JakeWharton/DiskLruCache/</url>
+        <license>Apache Software License 2.0</license>
+    </notice>
+    
+    <notice>
+        <name>Google HTTP Java Client</name>
+        <url>https://code.google.com/p/google-http-java-client/</url>
+        <license>Apache Software License 2.0</license>
+    </notice>
+    
+    <notice>
+        <name>JAudiotagger Library</name>
+        <url>http://www.jthink.net/jaudiotagger/</url>
+        <copyright>Licensed under Lesser General Public GNU License</copyright>
+    </notice>
+    
+    <notice>
+        <name>Prime</name>
+        <url>https://github.com/DHuckaby/Prime/</url>
+        <copyright>Copyright (C) 2013 Daniel Huckaby</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
+    
+    <notice>
+        <name>Universal Image Loader for Android</name>
+        <url>https://github.com/nostra13/Android-Universal-Image-Loader/</url>
+        <copyright>Copyright 2011-2013 Sergey Tarasevich</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
+    
+    <notice>
+        <name>ProgressButton</name>
+        <url>https://github.com/f2prateek/progressbutton/</url>
+        <copyright>Copyright 2013 Prateek Srivastava, Copyright 2012 Roman Nurik</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
+    
+    <notice>
+        <name>Unofficial Google Music API</name>
+        <url>https://github.com/simon-weber/Unofficial-Google-Music-API/</url>
+        <copyright>Copyright (c) 2013, Simon Weber, Licensed under 3-Clause BSD License.</copyright>
+    </notice>
+    
+</notices>

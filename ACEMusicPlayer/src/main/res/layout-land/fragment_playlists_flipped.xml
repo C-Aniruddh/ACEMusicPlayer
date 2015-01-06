@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/artists_flipped_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/playlists_flipped_layout"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent" 
+	    android:orientation="horizontal" >
+	    
+	    <RelativeLayout
+	        android:id="@+id/ll3"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1" >
+	
+	        <com.mobeta.android.dslv.DragSortListView 
+	            android:layout_height="wrap_content" 
+	            android:layout_width="match_parent" 
+	            android:id="@+id/playlists_flipped_listview" 
+	           	android:layout_alignParentTop="true"
+	            android:layout_centerHorizontal="true" 
+	            dslv:slide_shuffle_speed="0.5" 
+	            dslv:remove_enabled="true" 
+	            dslv:remove_mode="clickRemove" 
+	            dslv:max_drag_scroll_speed="0.8" 
+	            dslv:float_alpha="0.6" 
+	            dslv:drag_start_mode="onDown" 
+	            dslv:drag_scroll_start="0.33" 
+	            dslv:drag_handle_id="@+id/playlists_flipped_handle" 
+	            dslv:drag_enabled="true" 
+	            android:drawSelectorOnTop="true"
+	            dslv:click_remove_id="@+id/remove_song_from_queue"
+	            xmlns:dslv="http://schemas.android.com/apk/res/com.aniruddhc.acemusic.player" />
+	        
+	     	<ListView
+	            android:layout_height="wrap_content" 
+	            android:layout_width="match_parent" 
+	            android:id="@+id/default_playlists_flipped_listview" 
+	            android:visibility="gone"
+	           	android:layout_alignParentTop="true"
+	            android:layout_centerHorizontal="true" 
+	            android:drawSelectorOnTop="true" />
+	
+	    </RelativeLayout>
+	    
+	    <RelativeLayout
+	        android:id="@+id/playlists_flipped_header"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1.5" >
+
+	        <ImageView
+	            android:id="@+id/playlist_flipped_header_image"
+	            android:layout_width="fill_parent"
+	            android:layout_height="fill_parent"
+	            android:layout_centerHorizontal="true"
+	            android:layout_centerVertical="true"
+	            android:scaleType="centerCrop"
+	        	android:adjustViewBounds="true"
+	            android:src="@drawable/transparent_drawable" />
+	
+	    </RelativeLayout>
+        
+    </LinearLayout>
+
+</LinearLayout>

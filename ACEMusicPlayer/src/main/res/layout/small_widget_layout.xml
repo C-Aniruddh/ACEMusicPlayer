@@ -1,0 +1,117 @@
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/small_widget_parent_layout"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="2"
+    android:rowCount="3"
+    android:background="@drawable/appwidget_dark_bg"
+    android:gravity="top"
+    android:padding="@dimen/app_widget_padding"
+    tools:ignore="NestedWeights" >
+
+    <ImageView
+        android:id="@+id/app_widget_small_image"
+        android:layout_width="@dimen/app_widget_small_artwork_size"
+        android:layout_height="@dimen/app_widget_small_artwork_size"
+        android:background="@drawable/default_album_art"
+        android:contentDescription="@null"
+        android:scaleType="centerInside" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill_horizontal"
+        android:focusable="true"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+       <ImageButton
+           android:id="@+id/app_widget_small_previous"
+           android:layout_width="0dp"
+           android:layout_height="@dimen/app_widget_small_button_height"
+           android:layout_weight="1"
+           android:background="?android:selectableItemBackground"
+           android:focusable="true"
+           android:padding="@dimen/app_widget_small_button_padding"
+           android:scaleType="fitCenter"
+           android:src="@drawable/btn_playback_previous_light" />
+
+       <ImageButton
+           android:id="@+id/app_widget_small_play"
+           android:layout_width="0dp"
+           android:layout_height="@dimen/app_widget_small_button_height"
+           android:layout_weight="1"
+           android:background="?android:selectableItemBackground"
+           android:focusable="true"
+           android:padding="@dimen/app_widget_small_button_padding"
+           android:scaleType="fitCenter"
+           android:src="@drawable/btn_playback_play_light" />
+
+       <ImageButton
+           android:id="@+id/app_widget_small_next"
+           android:layout_width="0dp"
+           android:layout_height="@dimen/app_widget_small_button_height"
+           android:layout_weight="1"
+           android:background="?android:selectableItemBackground"
+           android:focusable="true"
+           android:padding="@dimen/app_widget_small_button_padding"
+           android:scaleType="fitCenter"
+           android:src="@drawable/btn_playback_next_light" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill_horizontal"
+        android:background="@color/transparent_white" />
+
+    <LinearLayout
+        android:id="@+id/app_widget_small_info_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill"
+        android:layout_marginBottom="@dimen/app_widget_bottom_margin"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/app_widget_small_info_container_padding_left"
+        android:paddingRight="@dimen/app_widget_small_info_container_padding_right" >
+
+        <TextView
+            android:id="@+id/app_widget_small_line_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="none"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_small"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/app_widget_small_text_separator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="none"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:singleLine="true"
+            android:text="-"
+            android:textColor="@color/transparent_white"
+            android:textSize="@dimen/text_size_small"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/app_widget_small_line_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:textColor="@color/transparent_white"
+            android:textSize="@dimen/text_size_small" />
+    </LinearLayout>
+
+</GridLayout>

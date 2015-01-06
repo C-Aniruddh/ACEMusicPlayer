@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="2dp"
+    android:paddingBottom="2dp"
+    android:background="@drawable/card_dark" >
+
+    <ImageView
+        android:id="@+id/remove_song_from_queue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:layout_centerVertical="true"
+		android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:lines="1" 
+      	android:ellipsize="end" 
+      	android:scaleX="0.75"
+      	android:scaleY="0.75"
+      	android:src="@drawable/cross_light" />
+    
+    <ImageView
+        android:id="@+id/playlists_flipped_handle"
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp"
+        android:layout_centerVertical="true" 
+        android:src="@drawable/drag_handle"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="75dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/playlists_flipped_handle"
+        android:layout_toLeftOf="@+id/remove_song_from_queue"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/playlists_flipped_song"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:text="Song Name"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:gravity="bottom"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+            
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:layout_weight="1.25" >
+            
+            <TextView
+                android:id="@+id/playlists_flipped_artist"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:text="Artist Name"
+                android:gravity="top"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+            
+        </RelativeLayout>
+        
+    </LinearLayout>
+
+</RelativeLayout>

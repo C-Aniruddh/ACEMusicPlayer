@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/folders_up_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="?android:selectableItemBackground"
+        android:layout_alignParentTop="true" >
+
+        <ImageView
+            android:id="@+id/folders_up_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/up" />
+
+        <TextView
+            android:id="@+id/folders_up_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/up_to_parent_dir"
+            android:padding="5dp"
+            android:textSize="18sp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/folders_up_icon" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/folders_current_directory_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="/storage/emulated/0/"
+        android:padding="10dp"
+        android:textSize="16sp"
+        android:layout_below="@+id/folders_up_layout" />
+
+    <ListView
+        android:id="@+id/folders_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:drawSelectorOnTop="true"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/folders_current_directory_text" />
+
+</RelativeLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/artists_flipped_songs_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+        android:id="@+id/fragment_artists_flipped_songs_layout"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="horizontal" >
+	
+	    <RelativeLayout
+	        android:id="@+id/ll3"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent" 
+	        android:layout_weight="1" >
+	
+	        <ProgressBar
+		        android:id="@+id/progressbar"
+		        style="?android:attr/progressBarStyleLarge"
+		        android:visibility="invisible"
+		        android:indeterminateOnly="true"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerHorizontal="true"
+		        android:layout_centerVertical="true" />
+
+		    <TextView
+		        android:id="@+id/empty_view_text"
+		        android:visibility="invisible"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerHorizontal="true"
+		        android:layout_centerVertical="true"
+		        android:hint="@string/no_songs_found_info"
+		        android:gravity="center"
+		        android:layout_marginLeft="25dp"
+		        android:layout_marginRight="25dp"
+		        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+		    <ImageView
+		        android:id="@+id/empty_view_image"
+		        android:visibility="invisible"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_above="@+id/empty_view_text"
+		        android:layout_centerHorizontal="true"
+		        android:src="@drawable/songs_light" />
+	        
+	        <ListView
+	            android:id="@+id/artistsCardFlippedSongsListView"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:drawSelectorOnTop="true"
+	            android:layout_alignParentTop="true"
+	            android:layout_centerHorizontal="true" >
+	        </ListView>
+	
+	    </RelativeLayout>
+	    
+	    <RelativeLayout
+	        android:id="@+id/artistsFlippedSongsHeader"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent" 
+	        android:layout_weight="1.5" >
+	        
+            <ImageView
+                android:id="@+id/artistsFlippedSongsHeaderBackground"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/transparent_drawable"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop" />
+	
+	    </RelativeLayout>
+        
+    </LinearLayout>
+
+</LinearLayout>

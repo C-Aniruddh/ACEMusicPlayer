@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    	
+	<item
+	    android:id="@+id/done_blacklist_manager"
+	    android:orderInCategory="100"
+	    android:showAsAction="always|withText"
+	    android:icon="@drawable/checkmark_light"
+	    android:title="@string/done"/>
+</menu>

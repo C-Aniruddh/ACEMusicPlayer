@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/scrollView1"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent" >
+
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="fill_parent" >
+
+		<TextView
+		    android:id="@+id/licenses_text"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="@string/oxygen_icons_license_description"
+		    android:layout_marginLeft="15dp"
+		    android:layout_marginTop="15dp"
+		    android:layout_marginRight="15dp"
+		    android:layout_marginBottom="15dp"
+		    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+		<TextView
+		    android:id="@+id/creative_commons_link"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignLeft="@+id/licenses_text"
+		    android:layout_below="@+id/licenses_text"
+		    android:text="Link"
+		    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+	</RelativeLayout>
+    
+</ScrollView>

@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.aniruddhc.acemusic.player"
+    android:hardwareAccelerated="true"
+    android:versionCode="49"
+    android:versionName="3.5" >
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-sdk
+        tools:node="replace"
+        android:minSdkVersion="15"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:name="com.aniruddhc.acemusic.player.Utils.Common"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true" >
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/fb_app_id" />
+
+        <!-- Used for Google Play Store Campaign Measurement -->
+;
+        <service android:name="com.google.analytics.tracking.android.CampaignTrackingService" />
+
+        <receiver
+            android:name="com.google.analytics.tracking.android.CampaignTrackingReceiver"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Now Playing Activity -->
+
+        <activity
+            android:name="com.aniruddhc.acemusic.player.NowPlayingActivity.NowPlayingActivity"
+            android:exported="true"
+            android:label="@string/now_playing"
+            android:launchMode="singleTask" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="content" />
+                <data android:host="media" />
+                <data android:mimeType="audio/*" />
+                <data android:mimeType="application/ogg" />
+                <data android:mimeType="application/x-ogg" />
+                <data android:mimeType="application/itunes" />
+            </intent-filter>
+        </activity>
+
+        <!-- Equalizer Activity -->
+
+        <activity
+            android:name="com.aniruddhc.acemusic.player.EqualizerActivity.EqualizerActivity"
+            android:exported="true"
+            android:label="@string/equalizer" >
+        </activity>
+
+        <!-- Launcher Activity -->
+
+        <activity android:name="com.aniruddhc.acemusic.player.LauncherActivity.LauncherActivity" >
+            <intent-filter>
+                    <action android:name="android.intent.action.MAIN" />
+                    <action android:name="android.intent.action.MUSIC_PLAYER" />
+                    <category android:name="android.intent.category.DEFAULT" />
+                    <category android:name="android.intent.category.LAUNCHER" />
+                    <category android:name="android.intent.category.APP_MUSIC" />
+            </intent-filter>
+        </activity>
+
+        <!-- Welcome Activity -->
+
+        <activity
+            android:name="com.aniruddhc.acemusic.player.WelcomeActivity.WelcomeActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <!-- Main Activity -->
+
+        <activity
+            android:name="com.aniruddhc.acemusic.player.MainActivity.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme" >
+        </activity>
+
+        <!-- Services -->
+
+        <service android:name="com.aniruddhc.acemusic.player.Services.AudioPlaybackService" />
+        <service android:name="com.aniruddhc.acemusic.player.Services.AutoFetchAlbumArtService" />
+        <service android:name="com.aniruddhc.acemusic.player.Services.PinGMusicSongsService" />
+
+        <service
+            android:name="com.aniruddhc.acemusic.player.Services.BuildMusicLibraryService"
+            android:exported="false" />
+        <service
+            android:name="com.aniruddhc.acemusic.player.Services.DashClockExtensionService"
+            android:icon="@drawable/dashclock_icon"
+            android:label="@string/app_full_name"
+            android:permission="com.google.android.apps.dashclock.permission.READ_EXTENSION_DATA" >
+            <intent-filter>
+                <action android:name="com.google.android.apps.dashclock.Extension" />
+            </intent-filter>
+
+            <meta-data
+                android:name="protocolVersion"
+                android:value="2" />
+            <meta-data
+                android:name="worldReadable"
+                android:value="true" />
+            <meta-data
+                android:name="description"
+                android:value="@string/dashclock_description" />
+        </service>
+
+        <!-- Large Widget -->
+
+        <receiver
+            android:name="com.aniruddhc.acemusic.player.WidgetProviders.LargeWidgetProvider"
+            android:label="ACE Large Widget" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/large_widget_info" />
+        </receiver>
+
+        <!-- Blurred Widget -->
+
+        <receiver
+            android:name="com.aniruddhc.acemusic.player.WidgetProviders.BlurredWidgetProvider"
+            android:label="ACE Blurred Album Art Widget" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/blurred_widget_info" />
+        </receiver>
+
+        <!-- Album Art Widget -->
+
+        <receiver
+            android:name="com.aniruddhc.acemusic.player.WidgetProviders.AlbumArtWidgetProvider"
+            android:label="ACE Album Art Widget" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/album_art_widget_info" />
+        </receiver>
+
+        <!-- Listens for media playback buttons (headphone buttons, bluetooth buttons, etc.) -->
+
+        <receiver android:name="com.aniruddhc.acemusic.player.BroadcastReceivers.HeadsetButtonsReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Small Widget -->
+
+        <receiver
+            android:name="com.aniruddhc.acemusic.player.WidgetProviders.SmallWidgetProvider"
+            android:label="ACE Small Widget" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/small_widget_info" />
+        </receiver>
+
+        <!-- Large widget configuration activity -->
+
+        <activity android:name="com.aniruddhc.acemusic.player.WidgetProviders.LargeWidgetConfigActivity" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+
+        <!-- Small widget configuration activity -->
+
+        <activity android:name="com.aniruddhc.acemusic.player.WidgetProviders.SmallWidgetConfigActivity" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+
+        <!-- Widget/Notification Now Playing Activity Broadcast Receiver -->
+
+        <receiver android:name="com.aniruddhc.acemusic.player.BroadcastReceivers.LaunchNowPlayingReceiver" >
+            <intent-filter>
+                <action android:name="com.aniruddhc.acemusic.player.LAUNCH_NOW_PLAYING_ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Widget/Notification Play/Pause Broadcast Receiver -->
+
+        <receiver android:name="com.aniruddhc.acemusic.player.BroadcastReceivers.PlayPauseBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="com.aniruddhc.acemusic.player.PLAY_PAUSE_ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Widget/Notification Previous Broadcast Receiver -->
+
+        <receiver android:name="com.aniruddhc.acemusic.player.BroadcastReceivers.PreviousBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="com.aniruddhc.acemusic.player.PREVIOUS_ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Widget/Notification Next Broadcast Receiver -->
+
+        <receiver android:name="com.aniruddhc.acemusic.player.BroadcastReceivers.NextBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="com.aniruddhc.acemusic.player.NEXT_ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Stop Service Broadcast Receiver -->
+
+        <receiver android:name="com.aniruddhc.acemusic.player.BroadcastReceivers.StopServiceBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="com.aniruddhc.acemusic.player.STOP_SERVICE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Receiver that gets called when the user changes songs from the Large Widget -->
+
+        <receiver android:name="com.aniruddhc.acemusic.player.BroadcastReceivers.ChangeTrackBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="com.aniruddhc.acemusic.player.WIDGET_CHANGE_TRACK" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Main Settings Activity -->
+
+        <activity android:name="com.aniruddhc.acemusic.player.SettingsActivity.SettingsActivity" >
+        </activity>
+
+        <!-- Dummy activity that launches Fragment dialogs from the Main Settings Activity -->
+
+        <activity
+            android:name="com.aniruddhc.acemusic.player.SettingsActivity.PreferenceDialogLauncherActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeTransparent" >
+        </activity>
+
+        <!-- Now Playing Queue Activity -->
+
+        <activity
+            android:name="com.aniruddhc.acemusic.player.NowPlayingQueueActivity.NowPlayingQueueActivity"
+            android:label="@string/now_playing_queue" >
+        </activity>
+
+        <!-- Blacklist Manager -->
+
+        <activity
+            android:name="com.aniruddhc.acemusic.player.BlacklistManagerActivity.BlacklistManagerActivity"
+            android:label="@string/title_activity_blacklist_manager" >
+        </activity>
+
+        <!-- Music Libraries Editor Activity -->
+
+        <activity
+            android:name="com.aniruddhc.acemusic.player.MusicLibraryEditorActivity.MusicLibraryEditorActivity"
+            android:label="@string/music_library_editor" >
+        </activity>
+
+        <!-- Music Libraries Editor Activity -->
+
+        <activity
+            android:name="com.aniruddhc.acemusic.player.PlaylistEditorActivity.PlaylistEditorActivity"
+            android:label="@string/playlists" >
+        </activity>
+
+        <!-- KitKat Fix Activity -->
+
+        <activity
+            android:name="com.aniruddhc.acemusic.player.Services.KitKatFixActivity"
+            android:allowTaskReparenting="true"
+            android:alwaysRetainTaskState="false"
+            android:clearTaskOnLaunch="true"
+            android:enabled="true"
+            android:excludeFromRecents="true"
+            android:finishOnTaskLaunch="true"
+            android:noHistory="true"
+            android:stateNotNeeded="true"
+            android:theme="@android:style/Theme.NoDisplay" />
+        <activity
+            android:name="com.aniruddhc.acemusic.player.BrowserSubListActivity.BrowserSubListActivity"
+            android:label="@string/title_activity_browser_sub" >
+        </activity>
+        <activity
+            android:name="com.aniruddhc.acemusic.player.BrowserSubGridActivity.BrowserSubGridActivity"
+            android:label="@string/title_activity_browsser_sub_grid" >
+        </activity>
+    </application>
+
+</manifest>

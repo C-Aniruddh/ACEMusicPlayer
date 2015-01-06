@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >  
+    <item android:state_checked="true" 
+          android:state_focused="true"
+          android:drawable="@drawable/play_track_notification" />  
+    <item android:state_checked="false"
+          android:state_focused="false"
+          android:drawable="@drawable/pause_track_notification" />
+    <item android:drawable="@drawable/pause_track_notification" /> <!-- the default -->
+</selector>

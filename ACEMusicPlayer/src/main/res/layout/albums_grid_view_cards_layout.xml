@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="3.5dp"
+        android:layout_marginLeft="3.5dp"
+        android:layout_marginBottom="3dp"
+        android:background="@drawable/card_gridview_dark"
+        android:orientation="vertical"
+        android:id="@+id/album_card_layout" >
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+            
+           	<com.aniruddhc.acemusic.player.Views.RoundedImageView
+	        	android:id="@+id/albumsGridViewImage"
+	        	android:layout_width="match_parent"
+	        	android:layout_height="match_parent"
+	        	android:layout_centerVertical="true"
+	        	android:layout_centerHorizontal="true"
+	        	android:adjustViewBounds="true"
+	        	android:scaleType="centerCrop" />
+            
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="4" >
+            
+            <TextView
+                android:id="@+id/albumsName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="25dp"
+                android:layout_toRightOf="@+id/overflow_icon"
+                android:ellipsize="marquee"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="Album Name"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#FFFFFF" />
+		
+		    <ImageButton
+		        android:id="@+id/overflow_icon"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:background="?android:selectableItemBackground"
+		        android:layout_centerVertical="true"
+		        android:layout_alignParentLeft="true"
+		        android:src="@drawable/ic_action_overflow_universal"
+		        android:layout_marginLeft="-5dp"
+		        android:scaleX="0.75"
+		        android:scaleY="0.75" />
+            
+        </RelativeLayout>
+        
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/selector"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00000000" />
+    
+</RelativeLayout>

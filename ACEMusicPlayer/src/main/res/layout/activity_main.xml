@@ -1,0 +1,40 @@
+<FrameLayout
+   	xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <android.support.v4.widget.DrawerLayout
+	    android:id="@+id/main_activity_drawer_root"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent" >
+	    
+	    <!-- Main activity layout -->
+	    <RelativeLayout
+		    android:layout_height="match_parent"
+		    android:layout_width="match_parent" >
+
+            <RelativeLayout
+                android:id="@+id/mainActivityContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".MainActivity" />
+
+		</RelativeLayout>
+
+		<RelativeLayout
+	        android:id="@+id/current_queue_drawer_container"
+	        android:layout_width="320dp"
+	        android:layout_height="match_parent"
+	        android:layout_gravity="end" />
+		
+	    <RelativeLayout
+	        android:id="@+id/nav_drawer_container"
+	        android:layout_width="240dp"
+	        android:layout_height="match_parent"
+	        android:layout_gravity="start" />
+	    
+	</android.support.v4.widget.DrawerLayout>
+    
+</FrameLayout>

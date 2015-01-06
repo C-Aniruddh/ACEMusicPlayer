@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Preference
+        android:key="preference_key_music_folders"
+        android:title="@string/select_music_folders" />
+
+    <Preference
+        android:key="preference_key_refresh_music_library"
+        android:title="@string/refresh_music_library" />
+
+    <Preference
+        android:key="preference_key_eq"
+        android:title="@string/equalizer">
+
+        <intent android:action="android.intent.action.MAIN"
+                    android:targetPackage="com.aniruddhc.acemusic.player.EqualizerActivity"
+                    android:targetClass="com.aniruddhc.acemusic.player.EqualizerActivity.EqualizerActivity" />
+    </Preference>
+</PreferenceScreen>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_weight="1"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent" >
+
+		<com.mobeta.android.dslv.DragSortListView
+	    	xmlns:dslv="http://schemas.android.com/apk/res/com.aniruddhc.acemusic.player"
+            android:id="@+id/now_playing_queue_list_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:drawSelectorOnTop="true"
+            dslv:drag_enabled="true"
+		    dslv:drag_handle_id="@+id/playlists_flipped_handle"
+		    dslv:drag_scroll_start="0.33"
+		    dslv:drag_start_mode="onDown"
+		    dslv:float_alpha="0.6"
+		    dslv:remove_enabled="true"
+		    dslv:remove_mode="flingRemove"
+		    dslv:slide_shuffle_speed="0.3" />
+
+		<TextView
+		    android:id="@+id/now_playing_queue_no_music_playing"
+		    android:visibility="gone"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_centerHorizontal="true"
+		    android:layout_centerVertical="true"
+		    android:text="@string/no_music_playing"
+		    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/now_playing_queue_current_song_container"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2" >
+
+        <ImageView
+            android:id="@+id/now_playing_queue_album_art"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="centerCrop" >
+        </ImageView>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/transparent_black_patch" >
+
+            <TextView
+                android:id="@+id/now_playing_queue_song_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="Song Title"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/now_playing_queue_song_artist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/now_playing_queue_song_title"
+                android:layout_centerHorizontal="true"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="Artist"
+                android:textColor="#EEEEEE"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <ImageButton
+                android:id="@+id/now_playing_queue_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/now_playing_queue_song_artist"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:scaleX="0.6"
+                android:scaleY="0.6"
+                android:visibility="gone"
+                android:background="?android:selectableItemBackground"
+                android:padding="5dp"
+                android:src="@drawable/btn_playback_pause" />
+
+            <ImageButton
+                android:id="@+id/now_playing_queue_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/now_playing_queue_song_artist"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/now_playing_queue_play"
+                android:visibility="gone"
+                android:padding="5dp"
+                android:background="?android:selectableItemBackground"
+                android:src="@drawable/btn_playback_next" />
+            
+            <ImageButton
+                android:id="@+id/now_playing_queue_previous"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/now_playing_queue_song_artist"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="15dp"
+                android:layout_toLeftOf="@+id/now_playing_queue_play"
+                android:visibility="gone"
+                android:padding="5dp"
+                android:background="?android:selectableItemBackground"
+                android:src="@drawable/btn_playback_previous" />
+
+            <ProgressBar
+                android:id="@+id/now_playing_queue_progressbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/now_playing_queue_song_artist"
+                android:layout_centerHorizontal="true"
+                android:indeterminateOnly="true"
+                android:visibility="gone"
+                android:layout_marginTop="15dp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

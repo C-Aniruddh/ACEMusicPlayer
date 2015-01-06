@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" xmlns:app="http://schemas.android.com/apk/res/com.aniruddhc.acemusic.player">
+
+    <TextView
+        android:id="@+id/blacklist_manager_info_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/blacklist_image"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="@string/blacklist_manager_info"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+	<com.mobeta.android.dslv.DragSortListView
+	    xmlns:dslv="http://schemas.android.com/apk/res/com.aniruddhc.acemusic.player"
+	    android:id="@+id/blacklist_manager_list"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_centerHorizontal="true"
+	    android:layout_below="@+id/blacklist_manager_info_text"
+	    app:drag_enabled="true"
+	    app:drag_handle_id="@+id/playlists_flipped_handle"
+	    app:drag_scroll_start="0.33"
+	    android:layout_marginTop="10dp"
+	    app:drag_start_mode="onDown"
+	    dslv:float_alpha="0.6"
+	    dslv:max_drag_scroll_speed="1.5"
+	    dslv:remove_enabled="true"
+	    dslv:remove_mode="flingRemove"
+	    dslv:slide_shuffle_speed="0.3" >
+	</com.mobeta.android.dslv.DragSortListView>
+
+	<ImageView
+	    android:id="@+id/blacklist_image"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_above="@+id/blacklist_manager_list"
+	    android:layout_alignParentLeft="true"
+	    android:layout_marginBottom="5dp"
+	    android:layout_marginLeft="5dp"
+	    android:src="@drawable/manage_blacklists" />
+
+</RelativeLayout>

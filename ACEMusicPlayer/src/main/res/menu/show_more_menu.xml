@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >  
+	<item  
+	    android:id="@+id/go_to_this_artist"
+	    android:title="@string/go_to_this_artist"/>
+	<item  
+	    android:id="@+id/go_to_this_album_artist"
+	    android:title="@string/go_to_this_album_artist"/>
+	<item  
+	    android:id="@+id/go_to_this_album"
+	    android:title="@string/go_to_this_album"/>
+	<item
+	    android:id="@+id/go_to_this_genre"
+	    android:title="@string/go_to_this_genre" />
+</menu>

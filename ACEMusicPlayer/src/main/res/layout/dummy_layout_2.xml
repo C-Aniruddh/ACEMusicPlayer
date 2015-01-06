@@ -1,0 +1,39 @@
+	    <RelativeLayout
+	        xmlns:android="http://schemas.android.com/apk/res/android"
+	        android:id="@+id/ll3"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1" >
+
+	        <EditText
+	            android:id="@+id/searchArtistTextField"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentRight="true"
+	            android:layout_alignParentTop="true"
+	            android:layout_toRightOf="@+id/fragment_artists_flipped_search_icon"
+	            android:ems="10"
+	            android:hint="Search Artist" 
+	            android:layout_marginRight="15dp" >
+	        </EditText>
+
+	        <ImageView
+	            android:id="@+id/fragment_artists_flipped_search_icon"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:layout_alignParentTop="true"
+	            android:layout_marginTop="7dp"
+	            android:layout_marginLeft="10dp"
+	            android:src="@drawable/search_light" />
+
+	        <ListView
+	            android:id="@+id/artistCardFlippedListView"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/searchArtistTextField"
+	            android:layout_centerHorizontal="true" >
+	        </ListView>
+
+	        </RelativeLayout>
+	

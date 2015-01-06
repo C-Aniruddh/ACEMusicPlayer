@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/albumArtistNameMusicLibraryEditor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/albumNameMusicLibraryEditor"
+        android:layout_below="@+id/albumNameMusicLibraryEditor"
+        android:layout_marginTop="25dp"
+        android:layout_toLeftOf="@+id/albumCheckboxMusicLibraryEditor"
+        android:ellipsize="end"
+        android:lines="1"
+        android:paddingBottom="10dp"
+        android:text="Artist Name"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <CheckBox
+        android:id="@+id/albumCheckboxMusicLibraryEditor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:layout_centerVertical="true"
+		android:layout_alignParentRight="true"
+		android:focusable="false"
+        android:layout_marginRight="15dp" />
+    
+    <ImageView
+        android:id="@+id/albumThumbnailMusicLibraryEditor"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true" 
+        android:src="@drawable/transparent_drawable"/>
+
+    <TextView
+        android:id="@+id/albumNameMusicLibraryEditor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:layout_toLeftOf="@+id/albumCheckboxMusicLibraryEditor"
+        android:layout_toRightOf="@+id/albumThumbnailMusicLibraryEditor"
+        android:ellipsize="end"
+        android:gravity="left"
+        android:lines="1"
+        android:text="Album Name"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>

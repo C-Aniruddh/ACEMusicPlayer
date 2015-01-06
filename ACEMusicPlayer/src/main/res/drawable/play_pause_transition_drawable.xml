@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transition xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/pause" />
+    <item android:id="@+id/play_pause_transition_drawable_play"
+          android:drawable="@drawable/play" />
+</transition>

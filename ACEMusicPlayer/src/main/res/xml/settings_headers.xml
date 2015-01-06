@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+    <header
+        android:fragment="com.aniruddhc.acemusic.player.SettingsActivity.SettingsAppearanceFragment"
+        android:icon="@drawable/color_palette"
+        android:summary="@string/appearance_description"
+        android:title="@string/appearance" />
+
+    <header
+        android:fragment="com.aniruddhc.acemusic.player.SettingsActivity.SettingsLayoutsFragment"
+        android:icon="@drawable/default_screen"
+        android:summary="@string/layouts_description"
+        android:title="@string/layouts" />
+
+
+    <header
+        android:fragment="com.aniruddhc.acemusic.player.SettingsActivity.SettingsMusicLibraryFragment"
+        android:icon="@drawable/playlists_folders"
+        android:summary="@string/music_folders_description"
+        android:title="@string/music_library" />
+
+    <header
+        android:fragment="com.aniruddhc.acemusic.player.SettingsActivity.SettingsAboutFragment"
+        android:icon="@drawable/ic_action_about"
+        android:summary="@string/about_description"
+        android:title="@string/licenses_and_about" />
+
+</preference-headers>

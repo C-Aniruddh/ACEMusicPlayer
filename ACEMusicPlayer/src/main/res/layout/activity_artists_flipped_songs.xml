@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" 
+    android:id="@+id/drawer_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    tools:context=".AlbumArtistsFlippedSongsFragment"
+	    android:orientation="vertical" >
+	
+	    <RelativeLayout
+	        android:id="@+id/fragment_artists_flipped_songs_placeholder"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent" 
+		    android:layout_weight="8" >
+		    
+	    </RelativeLayout>
+
+	</LinearLayout>
+	
+	<!-- Current queue drawer -->
+    <RelativeLayout
+        android:id="@+id/main_activity_queue_drawer"
+        android:layout_width="320dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end" >
+        
+        <TextView
+	        android:id="@+id/empty_queue_text"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true"
+	        android:layout_centerVertical="true"
+	        android:text="@string/queue_is_empty"
+	        android:layout_marginLeft="25dp"
+	        android:layout_marginRight="25dp"
+	        android:visibility="invisible"
+	        android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+        <RelativeLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/divider" >
+            
+            <com.mobeta.android.dslv.DragSortListView
+                xmlns:dslv="http://schemas.android.com/apk/res/com.aniruddhc.acemusic.player"
+                android:id="@+id/queue_list_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:drawSelectorOnTop="true"
+                dslv:click_remove_id="@+id/remove_song_from_queue"
+                dslv:drag_enabled="true"
+                dslv:drag_handle_id="@+id/playlists_flipped_handle"
+                dslv:drag_scroll_start="0.33"
+                dslv:drag_start_mode="onDown"
+                dslv:float_alpha="0.6"
+                dslv:max_drag_scroll_speed="0.8"
+                dslv:remove_enabled="true"
+                dslv:remove_mode="clickRemove"
+                dslv:slide_shuffle_speed="0.5" />
+            
+        </RelativeLayout>
+
+        <RelativeLayout 
+            android:id="@+id/current_queue_now_playing_layout"
+		    android:layout_width="match_parent"
+		    android:layout_height="128.0dip"
+		    android:background="?android:selectableItemBackground" >
+            
+               <!-- The height cannot be specified any other way. It must read "128.0dip" and cannot be referenced. I think it's a bug. -->
+		    <ImageView
+		        android:id="@+id/notification_expanded_base_image"
+		        android:layout_width="128.0dip"
+		        android:layout_height="128.0dip"
+		        android:layout_alignParentBottom="true"
+		        android:layout_alignParentTop="true"
+		        android:layout_alignParentLeft="true"
+		        android:scaleType="fitXY" />
+		    
+		    <LinearLayout
+		        android:id="@+id/notification_expanded_buttons"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentBottom="true"
+		        android:layout_alignParentRight="true"
+		        android:layout_toRightOf="@+id/notification_expanded_base_image"
+		        android:divider="?android:listDivider"
+		        android:dividerPadding="@dimen/notification_expanded_buttons_divider_padding"
+		        android:gravity="center_vertical"
+		        android:orientation="horizontal"
+		        android:showDividers="middle" >
+		
+		        <ImageButton
+		            android:id="@+id/notification_expanded_base_previous"
+		            android:layout_width="0dp"
+		            android:layout_height="@dimen/notification_expanded_button_height"
+		            android:layout_weight="1"
+		            android:background="?android:selectableItemBackground"
+		            android:padding="@dimen/notification_expanded_button_padding"
+		            android:scaleType="fitCenter"
+		            android:src="@drawable/btn_playback_previous" />
+		
+		        <ImageButton
+		            android:id="@+id/notification_expanded_base_play"
+		            android:layout_width="0dp"
+		            android:layout_height="@dimen/notification_expanded_button_height"
+		            android:layout_weight="1"
+		            android:background="?android:selectableItemBackground"
+		            android:padding="@dimen/notification_expanded_button_padding"
+		            android:scaleType="fitCenter"
+		            android:src="@drawable/btn_playback_pause" />
+		
+		        <ImageButton
+		            android:id="@+id/notification_expanded_base_next"
+		            android:layout_width="0dp"
+		            android:layout_height="@dimen/notification_expanded_button_height"
+		            android:layout_weight="1"
+		            android:background="?android:selectableItemBackground"
+		            android:padding="@dimen/notification_expanded_button_padding"
+		            android:scaleType="fitCenter"
+		            android:src="@drawable/btn_playback_next" />
+		    </LinearLayout>
+		
+		    <ImageView
+		        android:layout_width="wrap_content"
+		        android:layout_height="1dp"
+		        android:layout_above="@+id/notification_expanded_buttons"
+		        android:layout_alignParentRight="true"
+		        android:layout_toRightOf="@+id/notification_expanded_base_image"
+		        android:background="?android:listDivider" />
+		
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentTop="true"
+		        android:layout_gravity="center_vertical"
+		        android:layout_toRightOf="@+id/notification_expanded_base_image"
+		        android:orientation="vertical"
+		        android:paddingLeft="@dimen/notification_info_container_padding_left"
+		        android:paddingTop="@dimen/notification_expanded_content_padding_top" >
+		
+		        <TextView
+		            android:id="@+id/notification_expanded_base_line_one"
+		            style="@style/NotificationText"
+		            android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent.Title" />
+		
+		        <TextView
+		            android:id="@+id/notification_expanded_base_line_two"
+		            style="@style/NotificationText"
+		            android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent" />
+		
+		        <TextView
+		            android:id="@+id/notification_expanded_base_line_three"
+		            style="@style/NotificationText"
+		            android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent" />
+		    </LinearLayout>
+               
+           </RelativeLayout>
+           
+        <ImageView
+            android:id="@+id/divider"
+	        android:layout_width="fill_parent"
+	        android:layout_height="1dp"
+	        android:layout_below="@+id/current_queue_now_playing_layout"
+	        android:layout_alignParentRight="true"
+	        android:background="?android:dividerHorizontal" />	
+            
+    </RelativeLayout>
+	
+	<ScrollView
+	    xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="320dp"
+	    android:layout_height="match_parent"
+	    android:layout_gravity="start"
+	    android:id="@+id/nav_drawer"
+	    android:background="#121212" >
+	     
+		<RelativeLayout 
+	   		android:layout_width="fill_parent"
+	   		android:layout_height="wrap_content" >
+	     
+	      	<TextView
+	      	    android:id="@+id/browsers_header_text"
+	      	    android:layout_width="fill_parent"
+	      	    android:layout_height="wrap_content"
+	      	    android:layout_marginRight="15dp"
+	      	    android:layout_marginTop="15dp"
+	      	    android:layout_toRightOf="@+id/library_color_tag"
+	      	    android:ellipsize="end"
+	      	    android:singleLine="true"
+	      	    android:text="@string/browsers_caps"
+	      	    android:textSize="13sp" >
+	  
+	   		</TextView>
+	   
+		   	<RelativeLayout
+		       	android:id="@+id/browsers_header_underline"
+		       	android:layout_height="3dp"
+		       	android:layout_width="match_parent"
+		       	android:layout_below="@+id/browsers_header_text"
+		       	android:layout_marginTop="5dp"
+		       	android:background="#3A3A3A" >   
+		    </RelativeLayout>
+	   
+	   		<ListView
+	    		android:id="@+id/browsers_list_view"
+	    		android:layout_width="match_parent"
+	    		android:layout_height="wrap_content"
+	    		android:layout_below="@+id/browsers_header_underline"
+	    		android:layout_marginTop="5dp"
+	    		android:dividerHeight="1.25dp"
+	    		android:divider="@drawable/list_divider" >
+			</ListView>
+	
+		   	<TextView
+		   	    android:id="@+id/libraries_header_text"
+		   	    android:layout_width="fill_parent"
+		   	    android:layout_height="wrap_content"
+		   	    android:layout_below="@+id/browsers_list_view"
+		   	    android:layout_marginRight="15dp"
+		   	    android:layout_marginTop="30dp"
+		   	    android:layout_toRightOf="@+id/libraries_icon"
+		   	    android:text="@string/libraries_caps"
+		   	    android:textSize="13sp" >
+	  
+		   	</TextView>
+	   
+		   	<RelativeLayout
+		      	android:id="@+id/libraries_header_underline"
+		       	android:layout_height="3dp"
+		       	android:layout_width="match_parent"
+		       	android:layout_below="@+id/libraries_header_text"
+		       	android:layout_marginTop="5dp"
+		       	android:background="#3A3A3A" >
+		   	</RelativeLayout>
+	
+			<ListView
+			    android:id="@+id/libraries_list_view"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content" 
+			    android:layout_below="@+id/libraries_header_underline" 
+			    android:layout_marginTop="5dp"
+			    android:listSelector="#00000000"
+			    android:dividerHeight="1.25dp"
+	    		android:divider="@drawable/list_divider" >
+			</ListView>
+	
+			<ImageView
+			    android:id="@+id/library_color_tag"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_above="@+id/browsers_list_view"
+			    android:layout_alignParentLeft="true"
+			    android:layout_marginLeft="5dp"
+			    android:scaleX="0.5"
+			    android:scaleY="0.5"
+			    android:src="@drawable/circle_blue_dark" />
+	
+			<ImageView
+			    android:id="@+id/libraries_icon"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentLeft="true"
+			    android:layout_marginLeft="10dp"
+			    android:layout_below="@+id/browsers_list_view"
+			    android:layout_marginTop="15dp"
+			    android:src="@drawable/libraries" />
+	
+			<RelativeLayout
+	   		    android:id="@+id/libraries_help_overlay"
+	   		    android:layout_width="match_parent"
+	   		    android:layout_height="match_parent"
+	   		    android:layout_above="@+id/libraries_header_text"
+	   		    android:layout_alignParentTop="true"
+	   		    android:background="#C0000000" 
+	   		    android:visibility="gone" >
+	
+	   			<ImageView
+	   			    android:id="@+id/imageView1"
+	   			    android:layout_width="wrap_content"
+	   			    android:layout_height="wrap_content"
+	   			    android:layout_marginTop="15dp"
+	   			    android:layout_marginLeft="15dp"
+	   			    android:src="@drawable/libraries_light" />
+	
+	   			<TextView
+	   			    android:id="@+id/libraries_help_overlay_title"
+	   			    android:layout_width="wrap_content"
+	   			    android:layout_height="wrap_content"
+	   			    android:layout_alignBottom="@+id/imageView1"
+	   			    android:layout_toRightOf="@+id/imageView1"
+	   			    android:text="@string/libraries"
+	   			    android:textSize="25sp"
+	   			    android:layout_marginLeft="10dp"
+	   			    android:textColor="#FFFFFF" />
+	
+	   			<TextView
+	   			    android:id="@+id/libraries_help_overlay_text"
+	   			    android:layout_width="wrap_content"
+	   			    android:layout_height="wrap_content"
+	   			    android:layout_alignLeft="@+id/libraries_help_overlay_title"
+	   			    android:layout_below="@+id/libraries_help_overlay_title"
+	   			    android:text="@string/custom_libraries_help_overlay_text"
+	   			    android:layout_marginTop="15dp"
+	   			    android:layout_marginRight="20dp"
+	   			    android:textColor="#FFFFFF"
+	   			    android:textAppearance="?android:attr/textAppearanceMedium" />
+	   			
+	   			<ImageView
+	   			    android:layout_width="70dp"
+	   			    android:layout_height="90dp"
+	   			    android:src="@drawable/arrow_down"
+	   			    android:layout_below="@+id/libraries_help_overlay_text"
+	   			    android:layout_centerHorizontal="true"
+	   			    android:layout_marginTop="15dp"
+	   			    android:scaleType="fitXY">
+	   			    
+	   			</ImageView>
+	  
+	   		</RelativeLayout>
+			
+		</RelativeLayout>
+	     
+	</ScrollView>
+
+</android.support.v4.widget.DrawerLayout>

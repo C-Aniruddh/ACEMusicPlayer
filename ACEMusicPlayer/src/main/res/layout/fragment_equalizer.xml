@@ -1,0 +1,517 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/equalizerScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" >
+
+	    <LinearLayout
+	        android:id="@+id/equalizerLinearLayout"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true"
+	        android:orientation="horizontal" >
+
+	        <!-- 50 Hz Equalizer Layout -->
+
+	        <RelativeLayout
+	            android:id="@+id/equalizer50HzLayout"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="0.2"
+	            android:paddingLeft="5dp" >
+
+	            <com.aniruddhc.acemusic.player.Views.VerticalSeekBar
+	                android:id="@+id/equalizer50Hz"
+	                android:layout_width="wrap_content"
+	                android:layout_height="150dp"
+	                android:layout_marginTop="30dp"
+	                android:max="31"
+	                android:progress="16" />
+
+	            <TextView
+	                android:id="@+id/text50Hz"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_alignLeft="@+id/equalizer50Hz"
+	                android:layout_alignTop="@+id/equalizer50Hz"
+	                android:layout_marginTop="-25dp"
+	                android:text="50 Hz"
+	                android:singleLine="true"
+	                android:ellipsize="marquee"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+	            <TextView
+	                android:id="@+id/text50HzGain"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentLeft="true"
+	                android:layout_below="@+id/equalizer50Hz"
+	                android:text="0 dB"
+	                android:singleLine="true"
+	                android:ellipsize="marquee"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+	        </RelativeLayout>
+
+	        <!-- 130Hz Equalizer Bar -->
+
+	        <RelativeLayout
+	            android:id="@+id/equalizer130HzLayout"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="0.2" >
+
+	            <com.aniruddhc.acemusic.player.Views.VerticalSeekBar
+	                android:id="@+id/equalizer130Hz"
+	                android:layout_width="wrap_content"
+	                android:layout_height="150dp"
+	                android:layout_marginTop="30dp"
+	                android:max="31"
+	                android:progress="16" />
+
+	            <TextView
+	                android:id="@+id/text130Hz"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentLeft="true"
+	                android:layout_alignParentRight="true"
+	                android:layout_alignTop="@+id/equalizer130Hz"
+	                android:layout_marginTop="-25dp"
+	                android:text="130 Hz"
+	                android:singleLine="true"
+	                android:ellipsize="marquee"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+	            <TextView
+	                android:id="@+id/text130HzGain"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentLeft="true"
+	                android:layout_below="@+id/equalizer130Hz"
+	                android:text="0 dB"
+	                android:singleLine="true"
+	                android:ellipsize="marquee"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+	        </RelativeLayout>
+
+	        <!-- 320Hz Equalizer Bar -->
+
+	        <RelativeLayout
+	            android:id="@+id/equalizer320HzLayout"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="0.2" >
+
+	            <com.aniruddhc.acemusic.player.Views.VerticalSeekBar
+	                android:id="@+id/equalizer320Hz"
+	                android:layout_width="wrap_content"
+	                android:layout_height="150dp"
+	                android:layout_marginTop="30dp"
+	                android:max="31"
+	                android:progress="16" />
+
+	            <TextView
+	                android:id="@+id/text320Hz"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentLeft="true"
+	                android:layout_alignParentRight="true"
+	                android:layout_alignTop="@+id/equalizer320Hz"
+	                android:layout_marginTop="-25dp"
+	                android:text="320 Hz"
+	                android:singleLine="true"
+	                android:ellipsize="marquee"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+	            <TextView
+	                android:id="@+id/text320HzGain"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentLeft="true"
+	                android:layout_below="@+id/equalizer320Hz"
+	                android:text="0 dB"
+	                android:singleLine="true"
+	                android:ellipsize="marquee"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+	        </RelativeLayout>
+
+	        <!-- 800 Hz Equalizer Bar -->
+
+	        <RelativeLayout
+	            android:id="@+id/equalizer800HzLayout"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="0.2" >
+
+	            <com.aniruddhc.acemusic.player.Views.VerticalSeekBar
+	                android:id="@+id/equalizer800Hz"
+	                android:layout_width="wrap_content"
+	                android:layout_height="150dp"
+	                android:layout_marginTop="30dp"
+	                android:max="31"
+	                android:progress="16" />
+
+	            <TextView
+	                android:id="@+id/text800Hz"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentLeft="true"
+	                android:layout_alignParentRight="true"
+	                android:layout_alignTop="@+id/equalizer800Hz"
+	                android:layout_marginTop="-25dp"
+	                android:text="800 Hz"
+	                android:singleLine="true"
+	                android:ellipsize="marquee"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+	            <TextView
+	                android:id="@+id/text800HzGain"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentLeft="true"
+	                android:layout_below="@+id/equalizer800Hz"
+	                android:text="0 dB"
+	                android:singleLine="true"
+	                android:ellipsize="marquee"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+	        </RelativeLayout>
+
+	        <!-- 2 kHz Equalizer Bar -->
+
+	        <RelativeLayout
+	            android:id="@+id/equalizer2kHzLayout"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="0.2" >
+
+	            <com.aniruddhc.acemusic.player.Views.VerticalSeekBar
+	                android:id="@+id/equalizer2kHz"
+	                android:layout_width="wrap_content"
+	                android:layout_height="150dp"
+	                android:layout_marginTop="30dp"
+	                android:max="31"
+	                android:progress="16" />
+
+	            <TextView
+	                android:id="@+id/text2kHz"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentLeft="true"
+	                android:layout_alignParentRight="true"
+	                android:layout_alignTop="@+id/equalizer2kHz"
+	                android:layout_marginTop="-25dp"
+	                android:text="2 kHz"
+	                android:singleLine="true"
+	                android:ellipsize="marquee"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+	            <TextView
+	                android:id="@+id/text2kHzGain"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentLeft="true"
+	                android:layout_below="@+id/equalizer2kHz"
+	                android:text="0 dB"
+	                android:singleLine="true"
+	                android:ellipsize="marquee"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+	        </RelativeLayout>
+
+	        <!-- 5 kHz Equalizer Layout -->
+
+	        <RelativeLayout
+	            android:id="@+id/equalizer5kHzLayout"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="0.2" >
+
+	            <com.aniruddhc.acemusic.player.Views.VerticalSeekBar
+	                android:id="@+id/equalizer5kHz"
+	                android:layout_width="wrap_content"
+	                android:layout_height="150dp"
+	                android:layout_marginTop="30dp"
+	                android:max="31"
+	                android:progress="16" />
+
+	            <TextView
+	                android:id="@+id/text5kHz"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentLeft="true"
+	                android:layout_alignParentRight="true"
+	                android:layout_alignTop="@+id/equalizer5kHz"
+	                android:layout_marginTop="-25dp"
+	                android:text="5 kHz"
+	                android:singleLine="true"
+	                android:ellipsize="marquee"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+	            <TextView
+	                android:id="@+id/text5kHzGain"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentLeft="true"
+	                android:layout_below="@+id/equalizer5kHz"
+	                android:text="0 dB"
+	                android:singleLine="true"
+	                android:ellipsize="marquee"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+	        </RelativeLayout>
+
+	        <!-- 12.5 kHz Equalizer Layout -->
+
+	        <RelativeLayout
+	            android:id="@+id/equalizer12_5kHzLayout"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="0.2"
+	            android:paddingRight="5dp" >
+
+	            <com.aniruddhc.acemusic.player.Views.VerticalSeekBar
+	                android:id="@+id/equalizer12_5kHz"
+	                android:layout_width="wrap_content"
+	                android:layout_height="150dp"
+	                android:layout_marginTop="30dp"
+	                android:max="31"
+	                android:progress="16" />
+
+	            <TextView
+	                android:id="@+id/text12_5kHz"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentLeft="true"
+	                android:layout_alignParentRight="true"
+	                android:layout_alignTop="@+id/equalizer12_5kHz"
+	                android:layout_marginTop="-25dp"
+	                android:text="12.5 kHz"
+	                android:singleLine="true"
+	                android:ellipsize="marquee"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+	            <TextView
+	                android:id="@+id/text12_5kHzGain"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentLeft="true"
+	                android:layout_below="@+id/equalizer12_5kHz"
+	                android:text="0 dB"
+	                android:singleLine="true"
+	                android:ellipsize="marquee"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+	        </RelativeLayout>
+
+	    </LinearLayout>
+
+	    <RelativeLayout
+		    android:id="@+id/audio_fx_layout"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_below="@+id/equalizerLinearLayout"
+		    android:layout_marginTop="10dp" >
+
+		    <TextView
+		        android:id="@+id/virtualizer_title_text"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentTop="true"
+		        android:layout_centerHorizontal="true"
+		        android:layout_marginTop="35dp"
+		        android:text="@string/virtualizer_caps"
+		        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+		    <SeekBar
+		        android:id="@+id/virtualizer_seekbar"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@+id/virtualizer_title_text"
+		        android:layout_marginLeft="50dp"
+		        android:layout_marginRight="50dp"
+		        android:layout_centerHorizontal="true"
+		        android:layout_marginTop="10dp" />
+
+		    <TextView
+		        android:id="@+id/textView2"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignLeft="@+id/virtualizer_seekbar"
+		        android:layout_alignTop="@+id/virtualizer_title_text"
+		        android:layout_marginLeft="10dp"
+		        android:text="-"
+		        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+		    <TextView
+		        android:id="@+id/textView3"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignRight="@+id/virtualizer_seekbar"
+		        android:layout_alignTop="@+id/virtualizer_title_text"
+		        android:layout_marginRight="10dp"
+		        android:text="+"
+		        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+		    <TextView
+		        android:id="@+id/bass_boost_title_text"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@+id/virtualizer_seekbar"
+		        android:layout_centerHorizontal="true"
+		        android:layout_marginTop="35dp"
+		        android:text="@string/bass_boost_caps"
+		        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+		    <SeekBar
+		        android:id="@+id/bass_boost_seekbar"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@+id/bass_boost_title_text"
+		        android:layout_marginLeft="50dp"
+		        android:layout_marginRight="50dp"
+		        android:layout_centerHorizontal="true"
+		        android:layout_marginTop="10dp" />
+
+		    <TextView
+		        android:id="@+id/textView5"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignBottom="@+id/bass_boost_title_text"
+		        android:layout_alignLeft="@+id/textView2"
+		        android:text="-"
+		        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+		    <TextView
+		        android:id="@+id/textView6"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignRight="@+id/textView3"
+		        android:layout_alignTop="@+id/bass_boost_title_text"
+		        android:text="+"
+		        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+		    <TextView
+		        android:id="@+id/reverb_title_text"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignLeft="@+id/textView5"
+		        android:layout_below="@+id/bass_boost_seekbar"
+		        android:layout_marginTop="50dp"
+		        android:text="@string/reverb_caps"
+		        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+		    <Spinner
+		        android:id="@+id/reverb_spinner"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignBottom="@+id/reverb_title_text"
+		        android:layout_toRightOf="@+id/reverb_title_text"
+		        android:layout_marginBottom="-10dp"
+		        android:layout_marginLeft="10dp" />
+
+		</RelativeLayout>
+
+	    <LinearLayout
+	        android:id="@+id/equalizerPresetsLayout"
+	        android:layout_width="wrap_content"
+	        android:layout_height="60dp"
+	        android:layout_below="@+id/audio_fx_layout"
+	        android:layout_marginTop="20dp"
+	      	android:layout_marginBottom="10dp"
+	        android:orientation="horizontal" >
+
+	        <RelativeLayout
+		        android:id="@+id/saveAsPresetButton"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginBottom="10dp"
+		        android:layout_weight="1"
+		        android:background="@drawable/card_holo_blue"
+		        android:layout_marginLeft="5dp"
+		        android:layout_marginRight="5dp" >
+
+		        <RelativeLayout
+		            android:layout_width="match_parent"
+		            android:layout_height="match_parent"
+		            android:background="?android:selectableItemBackground">
+
+			        <TextView
+			            android:id="@+id/save_as_preset_text"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			        	android:text="@string/save_preset_caps"
+			        	android:layout_centerInParent="true"
+			        	android:singleLine="true"
+			        	android:ellipsize="marquee"
+			        	android:textColor="#FFFFFF"
+			        	android:padding="5dp" />
+
+			    </RelativeLayout>
+
+		    </RelativeLayout>
+
+		    <RelativeLayout
+		        android:id="@+id/loadPresetButton"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="1"
+		        android:layout_marginBottom="10dp"
+		        android:layout_marginLeft="5dp"
+		        android:layout_marginRight="5dp"
+		        android:background="@drawable/card_holo_blue" >
+
+		        <RelativeLayout
+		            android:layout_width="match_parent"
+		            android:layout_height="match_parent"
+		            android:background="?android:selectableItemBackground">
+
+		            <TextView
+			            android:id="@+id/load_preset_text"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			        	android:text="@string/load_preset_caps"
+			        	android:layout_centerInParent="true"
+			        	android:singleLine="true"
+			        	android:ellipsize="marquee"
+			        	android:textColor="#FFFFFF"
+			        	android:padding="5dp" />
+
+		        </RelativeLayout>
+
+		    </RelativeLayout>
+
+		    <RelativeLayout
+		        android:id="@+id/resetAllButton"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="1"
+		        android:layout_marginBottom="10dp"
+		        android:layout_marginLeft="5dp"
+		        android:layout_marginRight="5dp"
+		        android:background="@drawable/card_holo_red" >
+
+		        <RelativeLayout
+		            android:layout_width="match_parent"
+		            android:layout_height="match_parent"
+		            android:background="?android:selectableItemBackground">
+
+			        <TextView
+			            android:id="@+id/reset_all_text"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			        	android:text="@string/reset_all_caps"
+			        	android:layout_centerInParent="true"
+			        	android:singleLine="true"
+			        	android:ellipsize="marquee"
+			        	android:textColor="#FFFFFF"
+			        	android:padding="5dp" />
+
+			   </RelativeLayout>
+
+		   </RelativeLayout>
+
+	    </LinearLayout>
+
+	</RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,10 @@
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+	android:minHeight="100dp"
+	android:minWidth="250dp"
+	android:previewImage="@drawable/blurred_widget_preview"
+    android:updatePeriodMillis="86400000"
+    android:initialLayout="@layout/blurred_widget_layout"
+    android:widgetCategory="home_screen|keyguard"
+    android:initialKeyguardLayout="@layout/blurred_widget_layout" 
+    android:resizeMode="vertical|horizontal" >
+</appwidget-provider>

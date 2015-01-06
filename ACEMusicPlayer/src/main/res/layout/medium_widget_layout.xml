@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/appwidget_dark_bg"
+    android:padding="@dimen/widget_margin" >
+
+    <ImageView
+        android:id="@+id/widget_album_art"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/transparent_drawable" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/widget_album_art"
+        android:layout_alignTop="@+id/widget_album_art"
+        android:layout_toRightOf="@+id/widget_album_art" >
+
+        <ImageView
+            android:id="@+id/widget_next_track"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignTop="@+id/widget_play"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/widget_play"
+            android:src="@drawable/next_holo_button_states_light" />
+
+        <ImageView
+            android:id="@+id/widget_previous_track"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignTop="@+id/widget_play"
+            android:layout_marginRight="16dp"
+            android:layout_toLeftOf="@+id/widget_play"
+            android:src="@drawable/previous_holo_button_states_light" />
+
+        <ImageView
+            android:id="@+id/widget_play"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/play_holo_button_states_light" />
+
+        <ImageView
+            android:id="@+id/widget_song_title_image"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"/>
+
+        <ImageView
+            android:id="@+id/widget_artist_album_image"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/widget_song_title_image"
+			android:layout_marginLeft="10dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

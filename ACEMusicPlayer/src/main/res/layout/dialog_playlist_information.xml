@@ -1,0 +1,156 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        
+		    <TextView
+		      android:id="@+id/playlist_name_text"
+		      android:layout_width="wrap_content"
+		      android:layout_height="wrap_content"
+		      android:layout_alignParentLeft="true"
+		      android:layout_alignParentTop="true"
+		      android:layout_marginLeft="15dp"
+		      android:layout_marginTop="15dp"
+		      android:text="@string/playlist_name_caps"
+		      android:textAppearance="?android:attr/textAppearanceSmall" />
+		
+		  <TextView
+		      android:id="@+id/playlist_name_value"
+		      android:layout_width="wrap_content"
+		      android:layout_height="wrap_content"
+		      android:layout_alignLeft="@+id/playlist_name_text"
+		      android:layout_below="@+id/playlist_name_text"
+		      android:text="Sample Playlist Name"
+		      android:singleLine="true"
+		      android:ellipsize="end"
+		      android:textAppearance="?android:attr/textAppearanceMedium" />
+		
+		  <TextView
+		      android:id="@+id/playlist_format_text"
+		      android:layout_width="wrap_content"
+		      android:layout_height="wrap_content"
+		      android:layout_alignLeft="@+id/playlist_name_value"
+		      android:layout_below="@+id/playlist_name_value"
+		      android:layout_marginTop="20dp"
+		      android:text="@string/playlist_format_caps"
+		      android:textAppearance="?android:attr/textAppearanceSmall" />
+		
+		  <TextView
+		      android:id="@+id/playlist_format_value"
+		      android:layout_width="wrap_content"
+		      android:layout_height="wrap_content"
+		      android:layout_alignLeft="@+id/playlist_format_text"
+		      android:layout_below="@+id/playlist_format_text"
+		      android:singleLine="true"
+		      android:ellipsize="end"
+		      android:text="M3U"
+		      android:textAppearance="?android:attr/textAppearanceMedium" />
+		
+		  <TextView
+		      android:id="@+id/playlist_location_text"
+		      android:layout_width="wrap_content"
+		      android:layout_height="wrap_content"
+		      android:layout_alignLeft="@+id/playlist_format_value"
+		      android:layout_below="@+id/playlist_format_value"
+		      android:layout_marginTop="20dp"
+		      android:text="@string/playlist_location_caps"
+		      android:textAppearance="?android:attr/textAppearanceSmall" />
+		
+		  <TextView
+		      android:id="@+id/playlist_location_value"
+		      android:layout_width="wrap_content"
+		      android:layout_height="wrap_content"
+		      android:layout_alignLeft="@+id/playlist_location_text"
+		      android:layout_below="@+id/playlist_location_text"
+		      android:text="/mnt/sdcard/Playlists/My Playlists/Test/Sample Playlist.m3u"
+		      android:maxLines="2"
+		      android:ellipsize="end"
+		      android:textAppearance="?android:attr/textAppearanceMedium" />
+		
+		  <TextView
+		      android:id="@+id/playlist_number_of_songs_text"
+		      android:layout_width="wrap_content"
+		      android:layout_height="wrap_content"
+		      android:layout_alignLeft="@+id/playlist_location_value"
+		      android:layout_below="@+id/playlist_location_value"
+		      android:layout_marginTop="20dp"
+		      android:text="@string/number_of_songs_caps"
+		      android:textAppearance="?android:attr/textAppearanceSmall" />
+		
+		  <TextView
+		      android:id="@+id/playlist_number_of_songs_value"
+		      android:layout_width="wrap_content"
+		      android:layout_height="wrap_content"
+		      android:layout_alignLeft="@+id/playlist_number_of_songs_text"
+		      android:layout_below="@+id/playlist_number_of_songs_text"
+		      android:text="39"
+		      android:textAppearance="?android:attr/textAppearanceMedium" />
+		
+		  <TextView
+		      android:id="@+id/playlist_last_modified_text"
+		      android:layout_width="wrap_content"
+		      android:layout_height="wrap_content"
+		      android:layout_alignLeft="@+id/playlist_number_of_songs_value"
+		      android:layout_below="@+id/playlist_number_of_songs_value"
+		      android:layout_marginTop="20dp"
+		      android:text="@string/last_modified_caps"
+		      android:textAppearance="?android:attr/textAppearanceSmall" />
+		
+		  <TextView
+		      android:id="@+id/playlist_last_modified_value"
+		      android:layout_width="wrap_content"
+		      android:layout_height="wrap_content"
+		      android:layout_alignLeft="@+id/playlist_last_modified_text"
+		      android:layout_below="@+id/playlist_last_modified_text"
+		      android:text="09/12/2012 - 4:39 PM"
+		      android:textAppearance="?android:attr/textAppearanceMedium" />
+		
+		  <TextView
+		      android:id="@+id/playlist_added_to_library_text"
+		      android:layout_width="wrap_content"
+		      android:layout_height="wrap_content"
+		      android:layout_alignLeft="@+id/playlist_last_modified_value"
+		      android:layout_below="@+id/playlist_last_modified_value"
+		      android:layout_marginTop="20dp"
+		      android:text="@string/added_to_library_caps"
+		      android:textAppearance="?android:attr/textAppearanceSmall" />
+		
+		  <TextView
+		      android:id="@+id/playlist_added_to_library_value"
+		      android:layout_width="wrap_content"
+		      android:layout_height="wrap_content"
+		      android:layout_alignLeft="@+id/playlist_added_to_library_text"
+		      android:layout_below="@+id/playlist_added_to_library_text"
+		      android:text="07/13/2012 - 9:01 PM"
+		      android:textAppearance="?android:attr/textAppearanceMedium" />
+		
+		  <TextView
+		      android:id="@+id/playlist_created_text"
+		      android:layout_width="wrap_content"
+		      android:layout_height="wrap_content"
+		      android:layout_alignLeft="@+id/playlist_added_to_library_value"
+		      android:layout_below="@+id/playlist_added_to_library_value"
+		      android:layout_marginTop="20dp"
+		      android:text="@string/created_caps"
+		      android:textAppearance="?android:attr/textAppearanceSmall" />
+		
+		  <TextView
+		      android:id="@+id/playlist_created_value"
+		      android:layout_width="wrap_content"
+		      android:layout_height="wrap_content"
+		      android:layout_alignLeft="@+id/playlist_created_text"
+		      android:layout_below="@+id/playlist_created_text"
+		      android:text="04/12/09 - 10:49 AM"
+		      android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+    </RelativeLayout>
+    
+</ScrollView>
+    

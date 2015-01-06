@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >  
+	<item  
+	    android:id="@+id/edit_album_tags"  
+	    android:title="@string/edit_album_tags"/> 
+	<item  
+	    android:id="@+id/add_to_queue"  
+	    android:title="@string/add_to_queue"/> 
+	<item  
+	    android:id="@+id/play_next"  
+	    android:title="@string/play_next"/>
+	<item  
+	    android:id="@+id/add_to_playlist"  
+	    android:title="@string/add_to_playlist"/>    
+	<item
+	    android:id="@+id/get_album_art"
+	    android:title="@string/get_album_art" />
+	<item
+	    android:id="@+id/remove_album_art"
+	    android:title="@string/remove_album_art" />
+	<item
+	    android:id="@+id/blacklist_album"
+	    android:title="@string/blacklist_album" />
+	
+</menu>

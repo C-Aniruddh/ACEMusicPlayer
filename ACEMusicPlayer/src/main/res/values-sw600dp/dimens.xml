@@ -1,0 +1,14 @@
+<resources>
+
+    <!--
+         Customize dimensions originally defined in res/values/dimens.xml (such as
+         screen margins) for sw600dp devices (e.g. 7" tablets) here.
+         
+    -->
+    <dimen name="slidingmenu_offset">300dp</dimen>
+    
+    <!-- KitKat Navigation Bar Margins -->
+    <dimen name="kitkat_nav_bar_margin">0dp</dimen>
+    <dimen name="kitkat_nav_bar_margin_large">30dp</dimen>
+
+</resources>

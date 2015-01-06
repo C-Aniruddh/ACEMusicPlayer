@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/artistNameSongListView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/songNameMusicLibraryEditor"
+        android:layout_alignRight="@+id/songNameMusicLibraryEditor"
+        android:layout_below="@+id/songNameMusicLibraryEditor"
+        android:layout_marginTop="25dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:paddingBottom="10dp"
+        android:text="Artist Name"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <CheckBox
+        android:id="@+id/songCheckboxMusicLibraryEditor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:layout_centerVertical="true"
+		android:focusable="false"
+		android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp" />
+
+    <ImageView
+        android:id="@+id/songThumbnailMusicLibraryEditor"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true" 
+        android:src="@drawable/transparent_drawable"/>
+
+    <TextView
+        android:id="@+id/songNameMusicLibraryEditor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toLeftOf="@+id/songCheckboxMusicLibraryEditor"
+        android:layout_toRightOf="@+id/songThumbnailMusicLibraryEditor"
+        android:ellipsize="end"
+        android:gravity="left"
+        android:lines="1"
+        android:text="Song Name"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>

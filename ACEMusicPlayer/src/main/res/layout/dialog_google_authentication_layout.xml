@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:id="@+id/google_authentication_dialog_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:text="@string/enter_google_play_credentials"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <EditText
+        android:id="@+id/google_play_music_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/google_authentication_dialog_text"
+        android:layout_alignRight="@+id/google_authentication_dialog_text"
+        android:layout_below="@+id/google_authentication_dialog_text"
+        android:layout_marginTop="10dp"
+        android:hint="@string/username"
+        android:ems="10" >
+    </EditText>
+
+    <EditText
+        android:id="@+id/google_play_music_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/google_play_music_username"
+        android:layout_alignRight="@+id/google_play_music_username"
+        android:layout_below="@+id/google_play_music_username"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="10dp"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword" />
+
+</RelativeLayout>

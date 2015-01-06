@@ -1,0 +1,240 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme (Dark). -->
+    <!-- <style name="AppTheme" parent="android:Theme.Holo">
+        All customizations that are NOT specific to a particular API-level can go here.
+    </style>
+    
+    <style name="AppThemeLight" parent="android:Theme.Holo.Light">
+        All customizations that are NOT specific to a particular API-level can go here.
+    </style> -->
+    
+    <style name="AppTheme" parent="android:Theme.Holo">
+        <item name="android:actionBarItemBackground">@drawable/selectable_background_apptheme</item>
+        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Apptheme</item>
+        <item name="android:actionDropDownStyle">@style/DropDownNav.Apptheme</item>
+        <item name="android:actionBarStyle">@style/ActionBar.Solid.Apptheme</item>
+        <item name="android:actionModeBackground">@drawable/cab_background_top_apptheme</item>
+        <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_apptheme</item>
+        <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Apptheme</item>
+        <item name="android:windowContentOverlay">@drawable/ab_solid_shadow_holo</item>
+    </style>
+
+    <style name="NowPlayingTheme" parent="android:Theme.Holo.NoActionBar">
+        <item name="android:actionBarItemBackground">@drawable/selectable_background_apptheme</item>
+        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Apptheme</item>
+        <item name="android:actionDropDownStyle">@style/DropDownNav.Apptheme</item>
+        <item name="android:actionBarStyle">@style/ActionBar.Solid.Apptheme</item>
+        <item name="android:actionModeBackground">@drawable/cab_background_top_apptheme</item>
+        <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_apptheme</item>
+        <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Apptheme</item>
+        <item name="android:windowContentOverlay">@drawable/ab_solid_shadow_holo</item>
+    </style>
+
+    <style name="ActionBar.Solid.Apptheme" parent="@android:style/Widget.Holo.ActionBar.Solid">
+        <item name="android:background">@drawable/ab_background_textured_apptheme</item>
+        <item name="android:backgroundStacked">@drawable/ab_stacked_solid_apptheme</item>
+        <item name="android:backgroundSplit">@drawable/ab_background_textured_apptheme</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Apptheme</item>
+    </style>
+
+    <style name="ActionBar.Transparent.Apptheme" parent="@android:style/Widget.Holo.ActionBar">
+        <item name="android:background">@drawable/ab_transparent_apptheme</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Apptheme</item>
+    </style>
+
+    <style name="PopupMenu.Apptheme" parent="@android:style/Widget.Holo.ListPopupWindow">
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_apptheme</item>	
+    </style>
+
+    <style name="DropDownListView.Apptheme" parent="@android:style/Widget.Holo.ListView.DropDown">
+        <item name="android:listSelector">@drawable/selectable_background_apptheme</item>
+    </style>
+
+    <style name="ActionBarTabStyle.Apptheme" parent="@android:style/Widget.Holo.ActionBar.TabView">
+        <item name="android:background">@drawable/tab_indicator_ab_apptheme</item>
+    </style>
+
+    <style name="DropDownNav.Apptheme" parent="@android:style/Widget.Holo.Spinner">
+        <item name="android:background">@drawable/spinner_background_ab_apptheme</item>
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_apptheme</item>
+        <item name="android:dropDownSelector">@drawable/selectable_background_apptheme</item>
+    </style>
+    
+    <style name="ProgressBar.Apptheme" parent="@android:style/Widget.Holo.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal_apptheme</item>
+    </style>
+    
+    <style name="ActionButton.CloseMode.Apptheme" parent="@android:style/Widget.Holo.ActionButton.CloseMode">
+        <item name="android:background">@drawable/btn_cab_done_apptheme</item>
+    </style>
+
+    <!-- this style is only referenced in a Light.DarkActionBar based theme -->
+    <style name="Theme.Apptheme.Widget" parent="@android:style/Theme.Holo">
+        <item name="android:popupMenuStyle">@style/PopupMenu.Apptheme</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Apptheme</item>
+    </style>
+
+	<style name="AppThemeTransparentLight" parent="android:Theme.Holo.Light">
+    	<item name="android:windowIsTranslucent">true</item>
+    	<item name="android:windowBackground">@android:color/transparent</item>
+    	<item name="android:windowContentOverlay">@drawable/ab_solid_shadow_holo</item>
+    	<item name="android:windowNoTitle">true</item>
+    	<item name="android:windowIsFloating">true</item>
+    	<item name="android:backgroundDimEnabled">false</item>
+  	</style>
+  	
+	<style name="AppThemeTransparent" parent="android:Theme.Holo">
+    	<item name="android:windowIsTranslucent">true</item>
+    	<item name="android:windowBackground">@android:color/transparent</item>
+    	<item name="android:windowContentOverlay">@drawable/ab_solid_shadow_holo</item>
+    	<item name="android:windowNoTitle">true</item>
+    	<item name="android:windowIsFloating">true</item>
+    	<item name="android:backgroundDimEnabled">false</item>
+  	</style>
+  	
+	<!-- Application Theme (Light) -->
+	<style name="AppThemeLight" parent="@android:style/Theme.Holo.Light">
+        <item name="android:actionBarItemBackground">@drawable/selectable_background_appthemelight</item>
+        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Appthemelight</item>
+        <item name="android:actionBarStyle">@style/ActionBar.Solid.Appthemelight</item>
+        <item name="android:actionModeBackground">@drawable/cab_background_top_appthemelight</item>
+        <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_appthemelight</item>
+        <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Appthemelight</item>
+        <item name="android:windowContentOverlay">@drawable/ab_solid_shadow_holo</item>
+
+    </style>
+
+    <!-- Settings theme -->
+    <style name="SettingsThemeLight" parent="@android:style/Theme.Holo.Light.DarkActionBar">
+        <item name="android:actionBarItemBackground">@drawable/selectable_background_appthemelight</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Appthemelight</item>
+        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Appthemelight</item>
+        <item name="android:actionDropDownStyle">@style/DropDownNav.Appthemelight</item>
+        <item name="android:actionBarStyle">@style/ActionBar.Solid.Appthemelight</item>
+        <item name="android:actionModeBackground">@drawable/cab_background_top_appthemelight</item>
+        <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_appthemelight</item>
+        <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Appthemelight</item>
+        <item name="android:windowContentOverlay">@drawable/ab_solid_shadow_holo</item>
+        <!-- Light.DarkActionBar specific -->
+        <item name="android:actionBarWidgetTheme">@style/Theme.Appthemelight.Widget</item>
+
+    </style>
+
+    <style name="NowPlayingThemeLight" parent="@android:style/Theme.Holo.Light.NoActionBar">
+        <item name="android:actionBarItemBackground">@drawable/selectable_background_appthemelight</item>
+        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Appthemelight</item>
+        <item name="android:actionBarStyle">@style/ActionBar.Solid.Appthemelight</item>
+        <item name="android:actionModeBackground">@drawable/cab_background_top_appthemelight</item>
+        <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_appthemelight</item>
+        <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Appthemelight</item>
+        <item name="android:windowContentOverlay">@drawable/ab_solid_shadow_holo</item>
+
+    </style>
+
+    <style name="ActionBar.Solid.Appthemelight" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@drawable/ab_background_textured_appthemelight</item>
+        <item name="android:backgroundStacked">@drawable/ab_stacked_solid_appthemelight</item>
+        <item name="android:backgroundSplit">@drawable/ab_background_textured_appthemelight</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Appthemelight</item>
+    </style>
+
+    <style name="ActionBar.Transparent.Appthemelight" parent="@android:style/Widget.Holo.ActionBar">
+        <item name="android:background">@drawable/ab_transparent_appthemelight</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Appthemelight</item>
+    </style>
+
+    <style name="PopupMenu.Appthemelight" parent="@android:style/Widget.Holo.ListPopupWindow">
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_appthemelight</item>	
+    </style>
+
+    <style name="DropDownListView.Appthemelight" parent="@android:style/Widget.Holo.ListView.DropDown">
+        <item name="android:listSelector">@drawable/selectable_background_appthemelight</item>
+    </style>
+
+    <style name="ActionBarTabStyle.Appthemelight" parent="@android:style/Widget.Holo.ActionBar.TabView">
+        <item name="android:background">@drawable/tab_indicator_ab_appthemelight</item>
+    </style>
+
+    <style name="DropDownNav.Appthemelight" parent="@android:style/Widget.Holo.Spinner">
+        <item name="android:background">@drawable/spinner_background_ab_appthemelight</item>
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_appthemelight</item>
+        <item name="android:dropDownSelector">@drawable/selectable_background_appthemelight</item>
+    </style>
+    
+    <style name="ProgressBar.Appthemelight" parent="@android:style/Widget.Holo.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal_appthemelight</item>
+    </style>
+    
+    <style name="ActionButton.CloseMode.Appthemelight" parent="@android:style/Widget.Holo.ActionButton.CloseMode">
+        <item name="android:background">@drawable/btn_cab_done_appthemelight</item>
+    </style>
+
+    <!-- this style is only referenced in a Light.DarkActionBar based theme -->
+    <style name="Theme.Appthemelight.Widget" parent="@android:style/Theme.Holo">
+        <item name="android:popupMenuStyle">@style/PopupMenu.Appthemelight</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Appthemelight</item>
+    </style>
+	
+  	<style name="AppThemeNoActionBar" parent="android:Theme.Holo.NoActionBar">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    
+    <style name="AppThemeNoActionBarLight" parent="android:Theme.Holo.Light.NoActionBar">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    
+    <!-- Notification bar actions -->
+    <style name="NotificationAction">
+        <item name="android:layout_width">@dimen/notification_action_width</item>
+        <item name="android:layout_height">@dimen/notification_action_height</item>
+        <item name="android:gravity">center|right</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:padding">@dimen/notification_action_padding</item>
+        <item name="android:background">?android:selectableItemBackground</item>
+    </style>
+
+    <style name="NotificationAction.Previous" parent="@style/NotificationAction">
+        <item name="android:src">@drawable/btn_playback_previous_light</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="NotificationAction.Play" parent="@style/NotificationAction">
+        <item name="android:src">@drawable/btn_playback_play_light</item>
+    </style>
+
+    <style name="NotificationAction.Next" parent="@style/NotificationAction">
+        <item name="android:src">@drawable/btn_playback_next_light</item>
+    </style>
+
+    <style name="NotificationAction.Collapse" parent="@style/NotificationAction">
+        <item name="android:src">@drawable/btn_notification_collapse</item>
+    </style>
+    
+    <!-- Notification bar event text -->
+    <style name="NotificationText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:fadingEdge">horizontal</item>
+        <item name="android:singleLine">true</item>
+    </style>
+  	
+    <!-- Overflow icon -->
+    <style name="RoundedOverflow" parent="@android:style/Widget.Holo.ActionButton.Overflow">
+    	<item name="android:src">@drawable/ic_action_overflow_universal</item>
+	</style>
+    
+</resources>

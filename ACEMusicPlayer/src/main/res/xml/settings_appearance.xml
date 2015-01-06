@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <Preference
+        android:key="preference_key_app_theme"
+        android:title="@string/application_theme"
+        android:summary="@string/app_theme_description" />
+
+    <Preference
+        android:key="preference_key_player_color_scheme"
+        android:title="@string/player_color_scheme"
+        android:summary="@string/colors_description" />
+
+    <Preference
+        android:key="preference_key_startup_screen"
+        android:title="@string/default_browser"
+        android:summary="@string/default_browser_description" />
+
+    <CheckBoxPreference
+        android:key="preference_key_lockscreen_controls"
+        android:title="@string/show_lockscreen_controls"
+        android:summary="@string/show_lockscreen_controls_description"
+        android:checked="true" />
+
+</PreferenceScreen>

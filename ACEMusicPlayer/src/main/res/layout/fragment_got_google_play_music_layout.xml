@@ -1,0 +1,29 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:paddingBottom="10dp"
+    android:id="@+id/root_welcome_layout" >
+
+    <TextView
+        android:id="@+id/got_google_play_music_text_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:text="@string/got_google_play_music_text_1"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/got_google_play_music_text_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/got_google_play_music_text_1"
+        android:layout_below="@+id/got_google_play_music_text_1"
+        android:layout_marginTop="15dp"
+        android:text="@string/got_google_play_music_text_2"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+</RelativeLayout>

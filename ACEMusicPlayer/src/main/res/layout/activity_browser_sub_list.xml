@@ -1,0 +1,122 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/browser_sub_drawer_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.aniruddhc.acemusic.player.BrowserSubListActivity.BrowserSubListActivity">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/browser_sub_drawer_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent" >
+
+            <ListView
+                android:id="@+id/browser_sub_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:paddingTop="340dp"
+                android:layout_alignParentBottom="true"
+                android:drawSelectorOnTop="true" />
+
+            <RelativeLayout
+                android:id="@+id/browser_sub_header_layout"
+                android:layout_width="match_parent"
+                android:layout_height="340dp"
+                android:visibility="invisible"
+                android:layout_alignParentTop="true" >
+
+                <ImageView
+                    android:id="@+id/browser_sub_header_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="340dp"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/black_to_transparent_gradient"
+                    android:adjustViewBounds="true" />
+
+                <RelativeLayout
+                    android:id="@+id/browser_sub_header_text_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/black_to_transparent_gradient" >
+
+                    <TextView
+                        android:id="@+id/browser_sub_header_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="120dp"
+                        android:text="Header Text"
+                        android:ellipsize="marquee"
+                        android:marqueeRepeatLimit ="marquee_forever"
+                        android:singleLine="true"
+                        android:scrollHorizontally="true"
+                        android:textColor="#FFFFFF"
+                        android:shadowColor="#FF454545"
+                        android:shadowDx="0"
+                        android:shadowDy="0"
+                        android:shadowRadius="5"
+                        android:paddingRight="12dp"
+                        android:paddingLeft="12dp"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/browser_sub_header_sub_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/browser_sub_header_text"
+                        android:layout_marginRight="120dp"
+                        android:text="Subtext"
+                        android:ellipsize="marquee"
+                        android:marqueeRepeatLimit ="marquee_forever"
+                        android:singleLine="true"
+                        android:scrollHorizontally="true"
+                        android:textColor="#FF999999"
+                        android:shadowColor="#FF454545"
+                        android:shadowDx="0"
+                        android:shadowDy="0"
+                        android:shadowRadius="5"
+                        android:paddingRight="12dp"
+                        android:paddingLeft="12dp"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/browser_sub_play_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:text="@string/play_all_caps"
+                        android:textColor="#FFFFFF"
+                        android:padding="5dp"
+                        android:textSize="12sp"
+                        android:background="?android:selectableItemBackground"
+                        android:layout_marginRight="25dp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/current_queue_drawer_container"
+            android:layout_width="320dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end" />
+
+        <RelativeLayout
+            android:id="@+id/nav_drawer_container"
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start" />
+
+    </android.support.v4.widget.DrawerLayout>
+
+</RelativeLayout>
